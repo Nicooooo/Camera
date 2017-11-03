@@ -161,7 +161,7 @@ public class MainActivity extends AppCompatActivity implements AudioListener.Aud
     @Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
-		Log.d(TAG, "onCreate");
+		Log.d(TAG, "onCreate1111");
 		long debug_time = 0;
 		if( MyDebug.LOG ) {
 			Log.d(TAG, "onCreate");
