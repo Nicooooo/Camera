@@ -100,13 +100,14 @@
             android:id="@+id/focus_macro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingTop="5dp"
             android:layout_weight="1"
-            android:gravity="start">
+            android:gravity="bottom">
 
             <ImageView
                 android:id="@+id/macro"
                 android:layout_width="17dp"
-                android:layout_height="wrap_content"
+                android:layout_height="14dp"
                 android:layout_gravity="left"
                 android:scaleType="fitCenter"
                 android:src="@drawable/macro" />
@@ -124,7 +125,7 @@
                 android:id="@+id/mountain"
                 android:layout_width="17dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
+                android:layout_gravity="bottom"
                 android:scaleType="fitCenter"
                 android:src="@drawable/mountain" />
         </LinearLayout>

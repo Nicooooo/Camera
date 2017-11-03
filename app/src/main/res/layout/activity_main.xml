@@ -352,8 +352,9 @@
     <ImageButton
         android:id="@+id/timer"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:padding="10dp"
+        android:layout_alignBaseline="@id/settings"
         android:scaleType="fitCenter"
         android:layout_toLeftOf="@+id/settings_dots"
         android:contentDescription="@string/preference_show_time"
