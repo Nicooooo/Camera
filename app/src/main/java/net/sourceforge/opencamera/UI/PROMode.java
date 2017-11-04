@@ -27,6 +27,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 import net.sourceforge.opencamera.MainActivity;
+import net.sourceforge.opencamera.MyDebug;
 import net.sourceforge.opencamera.PreferenceKeys;
 import net.sourceforge.opencamera.Preview.Preview;
 import net.sourceforge.opencamera.R;
@@ -145,6 +146,7 @@ public class PROMode extends Fragment implements View.OnClickListener, SeekBar.O
         seekBar_focus.setOnSeekBarChangeListener(this);
         seekBar_saturation.setOnSeekBarChangeListener(this);
         seekBar_contrast.setOnSeekBarChangeListener(this);
+        seekBar_iso.setOnSeekBarChangeListener(this);
         horizontalscrollview.setOnScrollChangeListener(new View.OnScrollChangeListener() {
             @Override
             public void onScrollChange(View v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
@@ -523,6 +525,10 @@ public class PROMode extends Fragment implements View.OnClickListener, SeekBar.O
                         break;
 
                     case 1 :
+//                        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
+//                        SharedPreferences.Editor editor = sharedPreferences.edit();
+//                        String photo_mode_pef = sharedPreferences.getString(PreferenceKeys.getISOPreferenceKey(), "preference_iso");
+
                         wb_label.setText("Incandescence");
                         label_fadeout(wb_label);
                         break;
@@ -543,6 +549,56 @@ public class PROMode extends Fragment implements View.OnClickListener, SeekBar.O
                         break;
                 }
             break;
+
+            case R.id.seekBar_iso :
+                Log.d(TAG, " onProgressChanged1 " + progress + " seekBar_iso " + fromUser);
+                int iso;
+                String value;
+                switch (progress)
+                {
+                    case 0 :
+
+                        mainActivity.getApplicationInterface().setISOPref("auto");
+
+                        value =  mainActivity.getApplicationInterface().getISOPref();
+                        mainActivity.getPreview().camera_controller.setISO(value);
+                        Log.d(TAG, "value11 " + value);
+                        break;
+
+                    case 1 :
+                        mainActivity.getApplicationInterface().setISOPref("100");
+
+                        value =  mainActivity.getApplicationInterface().getISOPref();
+                        mainActivity.getPreview().camera_controller.setISO(value);
+                        Log.d(TAG, "value11 " + value);
+                        break;
+
+                    case 2 :
+                        mainActivity.getApplicationInterface().setISOPref("200");
+
+                        value =  mainActivity.getApplicationInterface().getISOPref();
+                        mainActivity.getPreview().camera_controller.setISO(value);
+                        Log.d(TAG, "value11 " + value);
+                        break;
+
+                    case 3 :
+                        mainActivity.getApplicationInterface().setISOPref("400");
+
+                        value =  mainActivity.getApplicationInterface().getISOPref();
+                        mainActivity.getPreview().camera_controller.setISO(value);
+                        Log.d(TAG, "value11 " + value);
+                        break;
+
+                    case 4 :
+                        mainActivity.getApplicationInterface().setISOPref("800");
+
+                        value =  mainActivity.getApplicationInterface().getISOPref();
+                        mainActivity.getPreview().camera_controller.setISO(value);
+                        Log.d(TAG, "value11 " + value);
+                        break;
+
+                }
+                break;
 
             case R.id.seekBar_exposure :
                 Log.d(TAG, " onProgressChanged1 " + progress + " fromUser " + fromUser);
@@ -618,4 +674,11 @@ public class PROMode extends Fragment implements View.OnClickListener, SeekBar.O
     public void onStopTrackingTouch(SeekBar seekBar) {
 
     }
+
+
+    private static double seekbarScaling(double frac) {
+        // For various seekbars, we want to use a non-linear scaling, so user has more control over smaller values
+        return (Math.pow(100.0, frac) - 1.0) / 99.0;
+    }
+
 }

@@ -1089,9 +1089,6 @@ public class MainUI {
 		{
 			Log.d(TAG, " isshown flashon isFlash1 " + isHdrState + " flash " + flash);
 //			hdr.setImageResource(R.drawable.ic_hdr_on);
-
-
-
 			editor = sharedPreferences.edit();
 			editor.putBoolean(PreferenceKeys.getHdrState(), false);
 			editor.putString(PreferenceKeys.getFlashAuto(), flash);

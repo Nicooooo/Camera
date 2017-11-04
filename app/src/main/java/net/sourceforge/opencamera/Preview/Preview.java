@@ -2728,8 +2728,8 @@ public class Preview implements SurfaceHolder.Callback, TextureView.SurfaceTextu
 	}
 	
 	public void setISO(int new_iso) {
-		if( MyDebug.LOG )
-			Log.d(TAG, "setISO(): " + new_iso);
+//		if( MyDebug.LOG )
+
 		if( camera_controller != null && supports_iso_range ) {
 			if( new_iso < min_iso )
 				new_iso = min_iso;
@@ -2741,6 +2741,7 @@ public class Preview implements SurfaceHolder.Callback, TextureView.SurfaceTextu
 	    		showToast(seekbar_toast, getISOString(new_iso), 96);
 			}
 		}
+		Log.d(TAG, "setISO(): " + new_iso);
 	}
 	
 	public void setExposureTime(long new_exposure_time) {
