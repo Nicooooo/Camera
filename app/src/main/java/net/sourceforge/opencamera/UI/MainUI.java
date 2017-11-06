@@ -71,6 +71,7 @@ public class MainUI {
 	private boolean isTimer;
 	public static final String HDR_STATE = "HDR_STATE";
 	private boolean hdrstate;
+	private int timer_index;
 	private Boolean isHdrState = false;
 	private String flash = "";
 	private CameraController camera_controller;
@@ -1212,6 +1213,7 @@ public class MainUI {
 	public void sec_three(){
 		Log.d(TAG," sec3 " );
 
+		timer_index = 3;
 		SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(main_activity);
 		SharedPreferences.Editor editor = sharedPreferences.edit();
 
@@ -1251,12 +1253,14 @@ public class MainUI {
 		hdr.setVisibility(View.VISIBLE);
 
 		main_activity.getPreview().isTakingPhotoOrOnTimer();
+		timer_function();
 	}
 
 
 	public void sec_five(){
 		Log.d(TAG," sec5 ");
 
+		timer_index = 5;
 		SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(main_activity);
 		SharedPreferences.Editor editor = sharedPreferences.edit();
 
@@ -1296,11 +1300,14 @@ public class MainUI {
 		timer.setVisibility(View.VISIBLE);
 		flash_auto.setVisibility(View.VISIBLE);
 		hdr.setVisibility(View.VISIBLE);
+		timer_function();
 	}
 
 	public void sec_nine(){
 		Log.d(TAG," sec9 ");
 
+
+		timer_index = 10;
 		SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(main_activity);
 		SharedPreferences.Editor editor = sharedPreferences.edit();
 
@@ -1339,6 +1346,16 @@ public class MainUI {
 		timer.setVisibility(View.VISIBLE);
 		flash_auto.setVisibility(View.VISIBLE);
 		hdr.setVisibility(View.VISIBLE);
+		timer_function();
+	}
+
+	public void timer_function(){
+
+		String new_timer_value = String.valueOf(timer_index);
+		SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(main_activity);
+		SharedPreferences.Editor editor = sharedPreferences.edit();
+		editor.putString(PreferenceKeys.getTimerPreferenceKey(), new_timer_value);
+		editor.apply();
 
 	}
 
