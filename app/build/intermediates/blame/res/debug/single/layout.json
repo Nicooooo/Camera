@@ -76,12 +76,12 @@
         "source": "C:\\Users\\CTI-OBD\\.android\\build-cache\\f2d300d9bb4764fc1e8419350f8d50574f8dc36e\\output\\res\\layout\\notification_template_lines.xml"
     },
     {
-        "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_camerascreen_brightness.xml",
-        "source": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\src\\main\\res\\layout\\dialog_camerascreen_brightness.xml"
-    },
-    {
         "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\layout\\five_frag.xml",
         "source": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\src\\main\\res\\layout\\five_frag.xml"
+    },
+    {
+        "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_camerascreen_brightness.xml",
+        "source": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\src\\main\\res\\layout\\dialog_camerascreen_brightness.xml"
     },
     {
         "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_sheet_dialog.xml",
@@ -96,12 +96,12 @@
         "source": "C:\\Users\\CTI-OBD\\.android\\build-cache\\9e78febb5dd64088fe87bd6f5ba47f3e793e8af9\\output\\res\\layout\\design_navigation_item_subheader.xml"
     },
     {
-        "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_timer_picture.xml",
-        "source": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\src\\main\\res\\layout\\dialog_timer_picture.xml"
-    },
-    {
         "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
         "source": "C:\\Users\\CTI-OBD\\.android\\build-cache\\f2d300d9bb4764fc1e8419350f8d50574f8dc36e\\output\\res\\layout\\abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_timer_picture.xml",
+        "source": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\src\\main\\res\\layout\\dialog_timer_picture.xml"
     },
     {
         "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
@@ -264,11 +264,11 @@
         "source": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\src\\main\\res\\layout\\settings_gear.xml"
     },
     {
-        "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",
-        "source": "C:\\Users\\CTI-OBD\\.android\\build-cache\\f2d300d9bb4764fc1e8419350f8d50574f8dc36e\\output\\res\\layout\\notification_media_cancel_action.xml"
-    },
-    {
         "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
         "source": "C:\\Users\\CTI-OBD\\.android\\build-cache\\f2d300d9bb4764fc1e8419350f8d50574f8dc36e\\output\\res\\layout\\abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",
+        "source": "C:\\Users\\CTI-OBD\\.android\\build-cache\\f2d300d9bb4764fc1e8419350f8d50574f8dc36e\\output\\res\\layout\\notification_media_cancel_action.xml"
     }
 ]

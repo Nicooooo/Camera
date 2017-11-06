@@ -16,12 +16,12 @@
         "source": "C:\\Users\\CTI-OBD\\.android\\build-cache\\f2d300d9bb4764fc1e8419350f8d50574f8dc36e\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
     },
     {
-        "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
-        "source": "C:\\Users\\CTI-OBD\\.android\\build-cache\\f2d300d9bb4764fc1e8419350f8d50574f8dc36e\\output\\res\\anim\\abc_popup_exit.xml"
-    },
-    {
         "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
         "source": "C:\\Users\\CTI-OBD\\.android\\build-cache\\f2d300d9bb4764fc1e8419350f8d50574f8dc36e\\output\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
+        "source": "C:\\Users\\CTI-OBD\\.android\\build-cache\\f2d300d9bb4764fc1e8419350f8d50574f8dc36e\\output\\res\\anim\\abc_popup_exit.xml"
     },
     {
         "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",

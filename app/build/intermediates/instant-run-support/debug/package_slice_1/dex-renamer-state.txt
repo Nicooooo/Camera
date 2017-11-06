@@ -1,4 +1,4 @@
-#Fri Nov 03 14:18:49 CST 2017
+#Mon Nov 06 17:26:16 CST 2017
 base.0=I\:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_1
 renamed.0=classes.dex
 file.0=I\:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_1\\classes.dex

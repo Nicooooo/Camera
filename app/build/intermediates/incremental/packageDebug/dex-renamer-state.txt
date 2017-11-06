@@ -1,7 +1,7 @@
-#Mon Nov 06 10:33:19 CST 2017
+#Mon Nov 06 17:26:16 CST 2017
 base.0=I\:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_3baa313519190a38ec3ab119af99611cbbe51815
-renamed.1=classes2.dex
-renamed.0=classes.dex
+renamed.1=classes.dex
+renamed.0=classes2.dex
 file.1=I\:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_3fac6fdbb727aaed2b78835f3b7c360bbda4c4cd\\classes.dex
 base.1=I\:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_3fac6fdbb727aaed2b78835f3b7c360bbda4c4cd
 file.0=I\:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_3baa313519190a38ec3ab119af99611cbbe51815\\classes.dex

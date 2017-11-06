@@ -52,12 +52,12 @@
         "source": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\src\\main\\res\\drawable-xxhdpi\\ic_camera_switch.png"
     },
     {
-        "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\panorama_pressed.png",
-        "source": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\src\\main\\res\\drawable-xxhdpi\\panorama_pressed.png"
-    },
-    {
         "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_mic_red_48dp.png",
         "source": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\src\\main\\res\\drawable-xxhdpi\\ic_mic_red_48dp.png"
+    },
+    {
+        "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\panorama_pressed.png",
+        "source": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\src\\main\\res\\drawable-xxhdpi\\panorama_pressed.png"
     },
     {
         "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\flash_on.png",
@@ -164,12 +164,12 @@
         "source": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\src\\main\\res\\drawable-xxhdpi\\sec_3.png"
     },
     {
-        "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\icon_gif.png",
-        "source": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\src\\main\\res\\drawable-xxhdpi\\icon_gif.png"
-    },
-    {
         "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\switch_camera.png",
         "source": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\src\\main\\res\\drawable-xxhdpi\\switch_camera.png"
+    },
+    {
+        "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\icon_gif.png",
+        "source": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\src\\main\\res\\drawable-xxhdpi\\icon_gif.png"
     },
     {
         "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_timer_white_48dp.png",
@@ -180,12 +180,12 @@
         "source": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\src\\main\\res\\drawable-xxhdpi\\sec_9.png"
     },
     {
-        "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_photo_camera_white_48dp.png",
-        "source": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\src\\main\\res\\drawable-xxhdpi\\ic_photo_camera_white_48dp.png"
-    },
-    {
         "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\incandescence.png",
         "source": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\src\\main\\res\\drawable-xxhdpi\\incandescence.png"
+    },
+    {
+        "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_photo_camera_white_48dp.png",
+        "source": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\src\\main\\res\\drawable-xxhdpi\\ic_photo_camera_white_48dp.png"
     },
     {
         "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_exposure_white_48dp.png",

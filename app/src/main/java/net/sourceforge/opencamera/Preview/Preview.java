@@ -1588,7 +1588,7 @@ public class Preview implements SurfaceHolder.Callback, TextureView.SurfaceTextu
 		if( MyDebug.LOG )
 			Log.d(TAG, "set up iso");
 		String value = applicationInterface.getISOPref();
-		if( MyDebug.LOG )
+//		if( MyDebug.LOG )
 			Log.d(TAG, "saved iso: " + value);
 		boolean is_manual_iso = false;
 		if( supports_iso_range ) {
