@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\raw\\histogram_adjust.bc",
+        "source": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\generated\\res\\rs\\debug\\raw\\histogram_adjust.bc"
+    },
+    {
+        "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\raw\\process_hdr.bc",
+        "source": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\generated\\res\\rs\\debug\\raw\\process_hdr.bc"
+    },
+    {
+        "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\raw\\beep.ogg",
+        "source": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\src\\main\\res\\raw\\beep.ogg"
+    },
+    {
+        "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\raw\\beep_hi.ogg",
+        "source": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\src\\main\\res\\raw\\beep_hi.ogg"
+    },
+    {
+        "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\raw\\histogram_compute.bc",
+        "source": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\generated\\res\\rs\\debug\\raw\\histogram_compute.bc"
+    },
+    {
+        "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\raw\\align_mtb.bc",
+        "source": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\generated\\res\\rs\\debug\\raw\\align_mtb.bc"
+    },
+    {
+        "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\raw\\create_mtb.bc",
+        "source": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\generated\\res\\rs\\debug\\raw\\create_mtb.bc"
+    }
+]

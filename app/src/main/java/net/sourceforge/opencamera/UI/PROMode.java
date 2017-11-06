@@ -26,11 +26,15 @@ import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import net.sourceforge.opencamera.CameraController.CameraController;
 import net.sourceforge.opencamera.MainActivity;
 import net.sourceforge.opencamera.MyDebug;
 import net.sourceforge.opencamera.PreferenceKeys;
 import net.sourceforge.opencamera.Preview.Preview;
 import net.sourceforge.opencamera.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by cti-pdd on 9/7/17.
@@ -40,56 +44,58 @@ public class PROMode extends Fragment implements View.OnClickListener, SeekBar.O
 
     private static final String TAG = "FirstFragment";
     private OrientationEventListener orientationEventListener;
-    private Preview preview;
 
     private ImageButton btnWB;
     private static MainActivity mainActivity;
+    private Preview preview;
     private View v;
-    ImageButton wb;
-    ImageButton iso;
-    ImageButton exposure;
-    ImageButton shutter;
-    ImageButton focus;
-    ImageButton saturation;
-    ImageButton contrast;
-    SeekBar seekBar_wb;
-    SeekBar seekBar_iso;
-    SeekBar seekBar_shutter;
-    LinearLayout layout_wb_top;
-    SeekBar seekBar_exposure;
-    SeekBar seekBar_saturation;
-    SeekBar seekBar_contrast;
-    LinearLayout layout_focus_top;
-    SeekBar seekBar_focus;
-    ImageButton left_pro;
-    ImageButton right_pro;
-    LinearLayout layout_iso_top;
-    LinearLayout layout_shutter_top;
-    TextView exposure_label;
-    TextView saturation_label;
-    TextView contrast_label;
-    TextView wb_label;
-    HorizontalScrollView horizontalscrollview;
-    TextView focus_auto;
-    ImageView macro;
-    ImageView mountain;
-    TextView shutter_auto;
-    TextView shutter_1s;
-    TextView shutter_2s;
-    TextView shutter_4s;
-    TextView shutter_8s;
-    TextView iso_auto;
-    TextView iso_100;
-    TextView iso_200;
-    TextView iso_400;
-    TextView iso_800;
-    boolean isArrownShown = true;
+    private ImageButton wb;
+    private ImageButton iso;
+    private ImageButton exposure;
+    private ImageButton shutter;
+    private ImageButton focus;
+    private ImageButton saturation;
+    private ImageButton contrast;
+    private SeekBar seekBar_wb;
+    private SeekBar seekBar_iso;
+    private SeekBar seekBar_shutter;
+    private LinearLayout layout_wb_top;
+    private SeekBar seekBar_exposure;
+    private SeekBar seekBar_saturation;
+    private SeekBar seekBar_contrast;
+    private LinearLayout layout_focus_top;
+    private SeekBar seekBar_focus;
+    private ImageButton left_pro;
+    private ImageButton right_pro;
+    private LinearLayout layout_iso_top;
+    private LinearLayout layout_shutter_top;
+    private TextView exposure_label;
+    private TextView saturation_label;
+    private TextView contrast_label;
+    private TextView wb_label;
+    private HorizontalScrollView horizontalscrollview;
+    private TextView focus_auto;
+    private ImageView macro;
+    private ImageView mountain;
+    private TextView shutter_auto;
+    private TextView shutter_1s;
+    private TextView shutter_2s;
+    private TextView shutter_4s;
+    private TextView shutter_8s;
+    private TextView iso_auto;
+    private TextView iso_100;
+    private TextView iso_200;
+    private TextView iso_400;
+    private TextView iso_800;
+    private boolean isArrownShown = true;
 
      @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
          this.mainActivity = (MainActivity)getActivity();
+         preview = mainActivity.getPreview();
+
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
@@ -97,6 +103,7 @@ public class PROMode extends Fragment implements View.OnClickListener, SeekBar.O
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         v = inflater.inflate(R.layout.pro_mode, container, false);
+
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(mainActivity);
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
@@ -552,52 +559,140 @@ public class PROMode extends Fragment implements View.OnClickListener, SeekBar.O
 
             case R.id.seekBar_iso :
                 Log.d(TAG, " onProgressChanged1 " + progress + " seekBar_iso " + fromUser);
-                int iso;
-                String value;
-                switch (progress)
-                {
-                    case 0 :
-
-                        mainActivity.getApplicationInterface().setISOPref("auto");
-
-                        value =  mainActivity.getApplicationInterface().getISOPref();
-                        mainActivity.getPreview().camera_controller.setISO(value);
-                        Log.d(TAG, "value11 " + value);
-                        break;
-
-                    case 1 :
-                        mainActivity.getApplicationInterface().setISOPref("100");
-
-                        value =  mainActivity.getApplicationInterface().getISOPref();
-                        mainActivity.getPreview().camera_controller.setISO(value);
-                        Log.d(TAG, "value11 " + value);
-                        break;
-
-                    case 2 :
-                        mainActivity.getApplicationInterface().setISOPref("200");
-
-                        value =  mainActivity.getApplicationInterface().getISOPref();
-                        mainActivity.getPreview().camera_controller.setISO(value);
-                        Log.d(TAG, "value11 " + value);
-                        break;
-
-                    case 3 :
-                        mainActivity.getApplicationInterface().setISOPref("400");
-
-                        value =  mainActivity.getApplicationInterface().getISOPref();
-                        mainActivity.getPreview().camera_controller.setISO(value);
-                        Log.d(TAG, "value11 " + value);
-                        break;
-
-                    case 4 :
-                        mainActivity.getApplicationInterface().setISOPref("800");
-
-                        value =  mainActivity.getApplicationInterface().getISOPref();
-                        mainActivity.getPreview().camera_controller.setISO(value);
-                        Log.d(TAG, "value11 " + value);
-                        break;
-
+                List<String> supported_isos;
+                final String manual_value = "m";
+                String toast_option = null;
+                if( preview.supportsISORange() ) {
+//                    if( MyDebug.LOG )
+                        Log.d(TAG, "supports ISO range");
+                    int min_iso = preview.getMinimumISO();
+                    int max_iso = preview.getMaximumISO();
+                    List<String> values = new ArrayList<>();
+                    values.add("auto");
+                    values.add(manual_value);
+                    int [] iso_values = {50, 100, 200, 400, 800, 1600, 3200, 6400};
+                    values.add("" + min_iso);
+                    for(int iso_value : iso_values) {
+                        if( iso_value > min_iso && iso_value < max_iso ) {
+                            values.add("" + iso_value);
+                        }
+                    }
+                    values.add("" + max_iso);
+                    supported_isos = values;
                 }
+                else {
+                    supported_isos = preview.getSupportedISOs();
+                }
+                SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(mainActivity);
+                String current_iso = sharedPreferences.getString(PreferenceKeys.getISOPreferenceKey(), "auto");
+                // if the manual ISO value isn't one of the "preset" values, then instead highlight the manual ISO icon
+                if( !current_iso.equals("auto") && supported_isos != null && supported_isos.contains(manual_value) && !supported_isos.contains(current_iso) )
+                    current_iso = manual_value;
+
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+
+                if(current_iso.equals("auto")) {
+                    editor.putLong(PreferenceKeys.getExposureTimePreferenceKey(), CameraController.EXPOSURE_TIME_DEFAULT);
+                } else {
+                    if( preview.getCameraController() != null && preview.getCameraController().captureResultHasIso() ) {
+                        int iso = preview.getCameraController().captureResultIso();
+//                        if( MyDebug.LOG )
+                        Log.d(TAG, "apply existing iso of " + iso);
+                        editor.putString(PreferenceKeys.getISOPreferenceKey(), "" + iso);
+                    }
+                    else {
+//                        if( MyDebug.LOG )
+                        Log.d(TAG, "no existing iso available");
+                        // use a default
+                        final int iso = 800;
+                        editor.putString(PreferenceKeys.getISOPreferenceKey(), "" + iso);
+                    }
+                    if( preview.usingCamera2API() ) {
+                        // if changing from auto to manual, preserve the current exposure time if it exists
+                        if( preview.getCameraController() != null && preview.getCameraController().captureResultHasExposureTime() ) {
+                            long exposure_time = preview.getCameraController().captureResultExposureTime();
+                            if( MyDebug.LOG )
+                                Log.d(TAG, "apply existing exposure time of " + exposure_time);
+                            editor.putLong(PreferenceKeys.getExposureTimePreferenceKey(), exposure_time);
+                        }
+                        else {
+                            if( MyDebug.LOG )
+                                Log.d(TAG, "no existing exposure time available");
+                        }
+                    }
+                }
+                switch (progress) {
+                    case 0: //ISO_Auto
+                        editor.putLong(PreferenceKeys.getExposureTimePreferenceKey(), CameraController.EXPOSURE_TIME_DEFAULT);
+                        editor.putString(PreferenceKeys.getISOPreferenceKey(), "auto");
+                        toast_option = "auto";
+                        break;
+                    case 1: //ISO_100
+                        editor.putString(PreferenceKeys.getISOPreferenceKey(), "100");
+                        toast_option = "100";
+                        break;
+                    case 2: //ISO_200
+                        editor.putString(PreferenceKeys.getISOPreferenceKey(), "200");
+                        toast_option = "200";
+                        break;
+                    case 3: //ISO_400
+                        editor.putString(PreferenceKeys.getISOPreferenceKey(), "400");
+                        toast_option = "400";
+                        break;
+                    case 4:
+                        editor.putString(PreferenceKeys.getISOPreferenceKey(), "800");
+                        toast_option = "800";
+                        break;
+                }
+                editor.apply();
+                mainActivity.updateForSettings("ISO: " + toast_option);
+
+//                int iso;
+//                String value;
+//                switch (progress)
+//                {
+//                    case 0 :
+//
+//                        mainActivity.getApplicationInterface().setISOPref("auto");
+//
+//                        value =  mainActivity.getApplicationInterface().getISOPref();
+//                        mainActivity.getPreview().camera_controller.setISO(value);
+//                        Log.d(TAG, "value11 " + value);
+//                        break;
+//
+//                    case 1 :
+//                        mainActivity.getApplicationInterface().setISOPref("100");
+//
+//                        value =  mainActivity.getApplicationInterface().getISOPref();
+//                        mainActivity.getPreview().camera_controller.setISO(value);
+//                        Log.d(TAG, "value11 " + value);
+//                        break;
+//
+//                    case 2 :
+//                        mainActivity.getApplicationInterface().setISOPref("200");
+//
+//                        value =  mainActivity.getApplicationInterface().getISOPref();
+//                        mainActivity.getPreview().camera_controller.setISO(value);
+//                        Log.d(TAG, "value11 " + value);
+//                        break;
+//
+//                    case 3 :
+//                        mainActivity.getApplicationInterface().setISOPref("400");
+//
+//                        value =  mainActivity.getApplicationInterface().getISOPref();
+//                        mainActivity.getPreview().camera_controller.setISO(value);
+//                        Log.d(TAG, "value11 " + value);
+//                        break;
+//
+//                    case 4 :
+//                        mainActivity.getApplicationInterface().setISOPref("800");
+//
+//                        value =  mainActivity.getApplicationInterface().getISOPref();
+//                        mainActivity.getPreview().camera_controller.setISO(value);
+//                        Log.d(TAG, "value11 " + value);
+//                        break;
+//
+//                }
                 break;
 
             case R.id.seekBar_exposure :
