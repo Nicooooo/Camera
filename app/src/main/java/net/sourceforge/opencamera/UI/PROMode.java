@@ -518,43 +518,67 @@ public class PROMode extends Fragment implements View.OnClickListener, SeekBar.O
 
     @Override
     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+        final MainActivity main_activity = (MainActivity)getContext();
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(main_activity);
+        SharedPreferences.Editor editor = null;
 
         switch (seekBar.getId())
         {
             case R.id.seekBar_wb :
+                String current_wb = null;
+//                String current_wb = sharedPreferences.getString(PreferenceKeys.getSceneModePreferenceKey(), preview.getCameraController().getDefaultSceneMode());
 
                 wb_label.setVisibility(View.VISIBLE);
                 switch (progress)
                 {
-                    case 0 :
+                    case 0 : //WB_AUTO
+                        editor = sharedPreferences.edit();
+                        editor.putString(PreferenceKeys.getWhiteBalancePreferenceKey(), "auto");
+
                         wb_label.setText("Auto");
                         label_fadeout(wb_label);
+                        current_wb = "auto";
                         break;
 
-                    case 1 :
-//                        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
-//                        SharedPreferences.Editor editor = sharedPreferences.edit();
-//                        String photo_mode_pef = sharedPreferences.getString(PreferenceKeys.getISOPreferenceKey(), "preference_iso");
+                    case 1 : //WB_INCANDESCENT
+                        editor = sharedPreferences.edit();
+                        editor.putString(PreferenceKeys.getWhiteBalancePreferenceKey(), "incandescent");
 
                         wb_label.setText("Incandescence");
                         label_fadeout(wb_label);
+                        current_wb = "incandescent";
                         break;
 
                     case 2 :
+                        editor = sharedPreferences.edit();
+                        editor.putString(PreferenceKeys.getWhiteBalancePreferenceKey(), "daylight");
+
                         wb_label.setText("Daylight");
                         label_fadeout(wb_label);
+                        current_wb = "daylight";
                         break;
 
                     case 3 :
+                        editor = sharedPreferences.edit();
+                        editor.putString(PreferenceKeys.getWhiteBalancePreferenceKey(), "flourescent");
+
                         wb_label.setText("Flourescence");
                         label_fadeout(wb_label);
+                        current_wb = "flourescence";
                         break;
 
                     case 4 :
+                        editor = sharedPreferences.edit();
+                        editor.putString(PreferenceKeys.getWhiteBalancePreferenceKey(), "cloudy-daylight");
+
                         wb_label.setText("Overcast");
                         label_fadeout(wb_label);
+                        current_wb = "overcast";
                         break;
                 }
+                editor.apply();
+                main_activity.updateForSettings("White Balance: " + current_wb);
+
             break;
 
             case R.id.seekBar_iso :
@@ -583,13 +607,12 @@ public class PROMode extends Fragment implements View.OnClickListener, SeekBar.O
                 else {
                     supported_isos = preview.getSupportedISOs();
                 }
-                SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(mainActivity);
                 String current_iso = sharedPreferences.getString(PreferenceKeys.getISOPreferenceKey(), "auto");
                 // if the manual ISO value isn't one of the "preset" values, then instead highlight the manual ISO icon
                 if( !current_iso.equals("auto") && supported_isos != null && supported_isos.contains(manual_value) && !supported_isos.contains(current_iso) )
                     current_iso = manual_value;
 
-                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor = sharedPreferences.edit();
 
                 if(current_iso.equals("auto")) {
                     editor.putLong(PreferenceKeys.getExposureTimePreferenceKey(), CameraController.EXPOSURE_TIME_DEFAULT);
