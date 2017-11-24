@@ -16,13 +16,16 @@
 
 /*
  * This file is auto-generated. DO NOT MODIFY!
- * The source Renderscript file: I:\\Randy\\Projects\\Android\\CherryCam\\app\\src\\main\\rs\\create_mtb.rs
+ * The source Renderscript file: E:\\10-09-17\\Procamera\\app\\src\\main\\rs\\create_mtb.rs
  */
 
 package net.sourceforge.opencamera;
 
+import android.os.Build;
+import android.os.Process;
+import java.lang.reflect.Field;
 import android.renderscript.*;
-import net.sourceforge.opencamera.create_mtbBitCode;
+import android.content.res.Resources;
 
 /**
  * @hide
@@ -31,10 +34,15 @@ public class ScriptC_create_mtb extends ScriptC {
     private static final String __rs_resource_name = "create_mtb";
     // Constructor
     public  ScriptC_create_mtb(RenderScript rs) {
-        super(rs,
-              __rs_resource_name,
-              create_mtbBitCode.getBitCode32(),
-              create_mtbBitCode.getBitCode64());
+        this(rs,
+             rs.getApplicationContext().getResources(),
+             rs.getApplicationContext().getResources().getIdentifier(
+                 __rs_resource_name, "raw",
+                 rs.getApplicationContext().getPackageName()));
+    }
+
+    public  ScriptC_create_mtb(RenderScript rs, Resources resources, int id) {
+        super(rs, resources, id);
         __ALLOCATION = Element.ALLOCATION(rs);
         mExportVar_median_value = 0;
         __I32 = Element.I32(rs);

@@ -13,7 +13,7 @@
         android:label="Tests for net.sourceforge.opencamera"
         android:targetPackage="net.sourceforge.opencamera" />
 
-    <application>
+    <application android:debuggable="true" >
         <uses-library android:name="android.test.runner" />
     </application>
 

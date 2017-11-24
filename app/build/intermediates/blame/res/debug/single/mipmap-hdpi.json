@@ -1,5 +1,9 @@
 [
     {
+        "merged": "E:\\10-09-17\\Procamera\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_launcher.png",
+        "source": "E:\\10-09-17\\Procamera\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
         "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_launcher.png",
         "source": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     }

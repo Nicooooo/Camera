@@ -1,11 +1,11 @@
 [
     {
-        "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
-        "source": "C:\\Users\\CTI-OBD\\.android\\build-cache\\f2d300d9bb4764fc1e8419350f8d50574f8dc36e\\output\\res\\anim\\abc_slide_in_bottom.xml"
+        "merged": "E:\\10-09-17\\Procamera\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\CTI OVS\\.android\\build-cache\\f6557a0545e85a6958903802062857c06a3d164b\\output\\res\\anim\\abc_fade_in.xml"
     },
     {
-        "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
-        "source": "C:\\Users\\CTI-OBD\\.android\\build-cache\\9e78febb5dd64088fe87bd6f5ba47f3e793e8af9\\output\\res\\anim\\design_snackbar_in.xml"
+        "merged": "E:\\10-09-17\\Procamera\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\CTI OVS\\.android\\build-cache\\f6557a0545e85a6958903802062857c06a3d164b\\output\\res\\anim\\abc_popup_enter.xml"
     },
     {
         "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_out.xml",
@@ -24,6 +24,54 @@
         "source": "C:\\Users\\CTI-OBD\\.android\\build-cache\\f2d300d9bb4764fc1e8419350f8d50574f8dc36e\\output\\res\\anim\\abc_popup_exit.xml"
     },
     {
+        "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\CTI-OBD\\.android\\build-cache\\f2d300d9bb4764fc1e8419350f8d50574f8dc36e\\output\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "E:\\10-09-17\\Procamera\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\CTI OVS\\.android\\build-cache\\f6557a0545e85a6958903802062857c06a3d164b\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\CTI-OBD\\.android\\build-cache\\f2d300d9bb4764fc1e8419350f8d50574f8dc36e\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\CTI-OBD\\.android\\build-cache\\f2d300d9bb4764fc1e8419350f8d50574f8dc36e\\output\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "E:\\10-09-17\\Procamera\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\CTI OVS\\.android\\build-cache\\f6557a0545e85a6958903802062857c06a3d164b\\output\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "E:\\10-09-17\\Procamera\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_out.xml",
+        "source": "C:\\Users\\CTI OVS\\.android\\build-cache\\5fea89678beded963d101d5ee2ec7e3f33ecac81\\output\\res\\anim\\design_fab_out.xml"
+    },
+    {
+        "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\CTI-OBD\\.android\\build-cache\\f2d300d9bb4764fc1e8419350f8d50574f8dc36e\\output\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
+        "source": "C:\\Users\\CTI-OBD\\.android\\build-cache\\9e78febb5dd64088fe87bd6f5ba47f3e793e8af9\\output\\res\\anim\\design_snackbar_in.xml"
+    },
+    {
+        "merged": "E:\\10-09-17\\Procamera\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\CTI OVS\\.android\\build-cache\\f6557a0545e85a6958903802062857c06a3d164b\\output\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "E:\\10-09-17\\Procamera\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\CTI OVS\\.android\\build-cache\\f6557a0545e85a6958903802062857c06a3d164b\\output\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "E:\\10-09-17\\Procamera\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\CTI OVS\\.android\\build-cache\\f6557a0545e85a6958903802062857c06a3d164b\\output\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "E:\\10-09-17\\Procamera\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_in.xml",
+        "source": "C:\\Users\\CTI OVS\\.android\\build-cache\\5fea89678beded963d101d5ee2ec7e3f33ecac81\\output\\res\\anim\\design_fab_in.xml"
+    },
+    {
         "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
         "source": "C:\\Users\\CTI-OBD\\.android\\build-cache\\f2d300d9bb4764fc1e8419350f8d50574f8dc36e\\output\\res\\anim\\abc_popup_enter.xml"
     },
@@ -36,31 +84,47 @@
         "source": "C:\\Users\\CTI-OBD\\.android\\build-cache\\9e78febb5dd64088fe87bd6f5ba47f3e793e8af9\\output\\res\\anim\\design_snackbar_out.xml"
     },
     {
+        "merged": "E:\\10-09-17\\Procamera\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_out.xml",
+        "source": "C:\\Users\\CTI OVS\\.android\\build-cache\\5fea89678beded963d101d5ee2ec7e3f33ecac81\\output\\res\\anim\\design_bottom_sheet_slide_out.xml"
+    },
+    {
         "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
         "source": "C:\\Users\\CTI-OBD\\.android\\build-cache\\f2d300d9bb4764fc1e8419350f8d50574f8dc36e\\output\\res\\anim\\abc_fade_out.xml"
     },
     {
-        "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
-        "source": "C:\\Users\\CTI-OBD\\.android\\build-cache\\f2d300d9bb4764fc1e8419350f8d50574f8dc36e\\output\\res\\anim\\abc_slide_in_top.xml"
+        "merged": "E:\\10-09-17\\Procamera\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_in.xml",
+        "source": "C:\\Users\\CTI OVS\\.android\\build-cache\\5fea89678beded963d101d5ee2ec7e3f33ecac81\\output\\res\\anim\\design_bottom_sheet_slide_in.xml"
     },
     {
-        "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
-        "source": "C:\\Users\\CTI-OBD\\.android\\build-cache\\f2d300d9bb4764fc1e8419350f8d50574f8dc36e\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+        "merged": "E:\\10-09-17\\Procamera\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\Users\\CTI OVS\\.android\\build-cache\\f6557a0545e85a6958903802062857c06a3d164b\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
     },
     {
         "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_in.xml",
         "source": "C:\\Users\\CTI-OBD\\.android\\build-cache\\9e78febb5dd64088fe87bd6f5ba47f3e793e8af9\\output\\res\\anim\\design_fab_in.xml"
     },
     {
-        "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
-        "source": "C:\\Users\\CTI-OBD\\.android\\build-cache\\f2d300d9bb4764fc1e8419350f8d50574f8dc36e\\output\\res\\anim\\abc_slide_out_bottom.xml"
-    },
-    {
         "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_out.xml",
         "source": "C:\\Users\\CTI-OBD\\.android\\build-cache\\9e78febb5dd64088fe87bd6f5ba47f3e793e8af9\\output\\res\\anim\\design_fab_out.xml"
     },
     {
+        "merged": "E:\\10-09-17\\Procamera\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
+        "source": "C:\\Users\\CTI OVS\\.android\\build-cache\\5fea89678beded963d101d5ee2ec7e3f33ecac81\\output\\res\\anim\\design_snackbar_in.xml"
+    },
+    {
+        "merged": "E:\\10-09-17\\Procamera\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
+        "source": "C:\\Users\\CTI OVS\\.android\\build-cache\\f6557a0545e85a6958903802062857c06a3d164b\\output\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "E:\\10-09-17\\Procamera\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\CTI OVS\\.android\\build-cache\\f6557a0545e85a6958903802062857c06a3d164b\\output\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
         "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_in.xml",
         "source": "C:\\Users\\CTI-OBD\\.android\\build-cache\\9e78febb5dd64088fe87bd6f5ba47f3e793e8af9\\output\\res\\anim\\design_bottom_sheet_slide_in.xml"
+    },
+    {
+        "merged": "E:\\10-09-17\\Procamera\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
+        "source": "C:\\Users\\CTI OVS\\.android\\build-cache\\5fea89678beded963d101d5ee2ec7e3f33ecac81\\output\\res\\anim\\design_snackbar_out.xml"
     }
 ]

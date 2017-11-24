@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 24
-    buildToolsVersion '25.0.0'
+    buildToolsVersion '26.0.2'
     compileOptions.encoding = 'UTF-8'
 
 //    aaptOptions.cruncherEnabled = false
@@ -38,6 +38,7 @@ android {
 repositories {
     maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
     mavenCentral()
+    google()
 }
 
 dependencies {

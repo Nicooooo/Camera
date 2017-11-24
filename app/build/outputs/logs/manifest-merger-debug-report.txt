@@ -1,258 +1,308 @@
 -- Merging decision tree log ---
 manifest
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:2:1-138:12
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:2:1-138:12
+INJECTED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:2:1-138:12
+INJECTED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:2:1-138:12
+INJECTED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:2:1-138:12
+MERGED from [com.android.support:design:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\design-24.2.0.aar\61d17de898bf0bc1b46adfce866091f6\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\appcompat-v7-24.2.0.aar\8bec291de415cf7f6794a247691573b2\AndroidManifest.xml:17:1-27:12
+MERGED from [:library] E:\10-09-17\Procamera\library\build\intermediates\manifests\full\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-v4:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\support-v4-24.2.0.aar\b647d077f6f696c2cd0391e7074d8d10\AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:multidex:1.0.2] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\51671a98aad06d2c5a045fa8bd8be061\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-24.2.0.aar\bc348edde82952a1b4b2472ccf28c4e0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:support-vector-drawable:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-24.2.0.aar\1b1a01eaca93c6462a70c3fb2c5a389f\AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:recyclerview-v7:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-24.2.0.aar\38f2f4a852f09100fd955948e8785113\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\support-fragment-24.2.0.aar\f56ef988c2b28d5469b514b6b2656f69\AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-core-ui:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\support-core-ui-24.2.0.aar\d3523846c5eb737009873d9904ce63d8\AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-core-utils:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\support-core-utils-24.2.0.aar\dc7c08bca7d55a4b8e3118e0e2e9e2e1\AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-media-compat:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\support-media-compat-24.2.0.aar\d03544ff4e7164e4ae0d90a7085cea2c\AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-compat:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\support-compat-24.2.0.aar\4684bc156d0fa4daf173ca9cb940aca5\AndroidManifest.xml:17:1-27:12
+INJECTED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:2:1-138:12
+INJECTED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:2:1-138:12
+INJECTED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:2:1-138:12
 	package
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:3:5-41
-		INJECTED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml
-		INJECTED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:3:5-41
+		INJECTED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml
+		INJECTED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml
 	android:versionName
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:5:5-31
-		INJECTED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml
-		INJECTED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml
-	android:versionCode
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:4:5-29
-		INJECTED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml
-		INJECTED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:5:5-31
+		INJECTED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml
+		INJECTED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:4:5-29
+		INJECTED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml
+		INJECTED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml
 	android:installLocation
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:6:5-35
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:6:5-35
 supports-screens
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:9:5-164
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:9:5-164
 	android:largeScreens
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:9:52-79
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:9:52-79
 	android:smallScreens
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:9:109-136
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:9:109-136
 	android:normalScreens
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:9:80-108
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:9:80-108
 	android:xlargeScreens
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:9:23-51
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:9:23-51
 	android:anyDensity
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:9:137-162
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:9:137-162
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:11:5-80
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:11:5-80
 	android:name
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:11:22-78
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:11:22-78
 uses-permission#android.permission.CAMERA
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:12:5-65
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:12:5-65
 	android:name
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:12:22-62
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:12:22-62
 uses-permission#android.permission.RECORD_AUDIO
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:13:5-71
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:13:5-71
 	android:name
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:13:22-68
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:13:22-68
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:14:5-79
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:14:5-79
 	android:name
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:14:22-76
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:14:22-76
 uses-permission#android.permission.FLASHLIGHT
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:15:5-68
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:15:5-68
 	android:name
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:15:22-66
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:15:22-66
 uses-feature#android.hardware.camera
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:16:5-60
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:16:5-60
 	android:name
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:16:19-57
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:16:19-57
 uses-feature#android.hardware.camera2.full
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:17:5-66
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:17:5-66
 	android:name
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:17:19-63
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:17:19-63
 uses-feature#android.hardware.microphone
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:18:5-64
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:18:5-64
 	android:name
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:18:19-61
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:18:19-61
 uses-feature#android.hardware.camera.any
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:20:5-64
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:20:5-64
 	android:name
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:20:19-61
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:20:19-61
 uses-feature#android.hardware.camera.autofocus
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:21:5-70
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:21:5-70
 	android:name
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:21:19-67
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:21:19-67
 application
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:23:5-137:19
-MERGED from [com.android.support:design:24.2.0] C:\Users\CTI-OBD\.android\build-cache\9e78febb5dd64088fe87bd6f5ba47f3e793e8af9\output\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:24.2.0] C:\Users\CTI-OBD\.android\build-cache\f2d300d9bb4764fc1e8419350f8d50574f8dc36e\output\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:24.2.0] C:\Users\CTI-OBD\.android\build-cache\c901ebd27d96f17a5c344ce30b136de9159eec44\output\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:24.2.0] C:\Users\CTI-OBD\.android\build-cache\8afb03a9e8287355044eda9e34016eae3ce3a5ad\output\AndroidManifest.xml:23:5-20
-MERGED from [CherryCam:library:unspecified] I:\Randy\Projects\Android\CherryCam\library\build\intermediates\bundles\default\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:support-v4:24.2.0] C:\Users\CTI-OBD\.android\build-cache\ae2f2ffb551dd42219b7f5acecb3fe7396474184\output\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-fragment:24.2.0] C:\Users\CTI-OBD\.android\build-cache\50ecee9f54c879c0c0503809a57c357d1689359b\output\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-utils:24.2.0] C:\Users\CTI-OBD\.android\build-cache\5a540dfffd2d81b618fafc59e7b9beb8669f7136\output\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-media-compat:24.2.0] C:\Users\CTI-OBD\.android\build-cache\7b6dae452738c071b2b1def67de8344bbb44e924\output\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-ui:24.2.0] C:\Users\CTI-OBD\.android\build-cache\3e8f888a46fcf14edddeb3109ec2887c4fe70071\output\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:24.2.0] C:\Users\CTI-OBD\.android\build-cache\bd64b8e9141b7ac035f9e8a07be2a2cb04b226c7\output\AndroidManifest.xml:25:5-20
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:23:5-137:19
+MERGED from [com.android.support:design:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\design-24.2.0.aar\61d17de898bf0bc1b46adfce866091f6\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\design-24.2.0.aar\61d17de898bf0bc1b46adfce866091f6\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\appcompat-v7-24.2.0.aar\8bec291de415cf7f6794a247691573b2\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\appcompat-v7-24.2.0.aar\8bec291de415cf7f6794a247691573b2\AndroidManifest.xml:25:5-20
+MERGED from [:library] E:\10-09-17\Procamera\library\build\intermediates\manifests\full\debug\AndroidManifest.xml:9:5-20
+MERGED from [:library] E:\10-09-17\Procamera\library\build\intermediates\manifests\full\debug\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-v4:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\support-v4-24.2.0.aar\b647d077f6f696c2cd0391e7074d8d10\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\support-v4-24.2.0.aar\b647d077f6f696c2cd0391e7074d8d10\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-24.2.0.aar\bc348edde82952a1b4b2472ccf28c4e0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-24.2.0.aar\bc348edde82952a1b4b2472ccf28c4e0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-24.2.0.aar\1b1a01eaca93c6462a70c3fb2c5a389f\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-vector-drawable:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-24.2.0.aar\1b1a01eaca93c6462a70c3fb2c5a389f\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-fragment:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\support-fragment-24.2.0.aar\f56ef988c2b28d5469b514b6b2656f69\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\support-fragment-24.2.0.aar\f56ef988c2b28d5469b514b6b2656f69\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\support-core-ui-24.2.0.aar\d3523846c5eb737009873d9904ce63d8\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\support-core-ui-24.2.0.aar\d3523846c5eb737009873d9904ce63d8\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\support-core-utils-24.2.0.aar\dc7c08bca7d55a4b8e3118e0e2e9e2e1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\support-core-utils-24.2.0.aar\dc7c08bca7d55a4b8e3118e0e2e9e2e1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\support-media-compat-24.2.0.aar\d03544ff4e7164e4ae0d90a7085cea2c\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\support-media-compat-24.2.0.aar\d03544ff4e7164e4ae0d90a7085cea2c\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\support-compat-24.2.0.aar\4684bc156d0fa4daf173ca9cb940aca5\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\support-compat-24.2.0.aar\4684bc156d0fa4daf173ca9cb940aca5\AndroidManifest.xml:25:5-20
 	android:label
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:26:9-41
-	android:allowBackup
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:24:9-35
-	android:icon
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:25:9-43
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:26:9-41
 	android:largeHeap
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:28:9-33
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:28:9-33
+	android:icon
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:25:9-43
+	android:allowBackup
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:24:9-35
 	android:theme
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:27:9-59
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:27:9-59
 activity#net.sourceforge.opencamera.MainActivity
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:31:9-68:20
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:31:9-68:20
+	android:screenOrientation
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:34:13-49
 	android:clearTaskOnLaunch
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:36:4-36
-	android:screenOrientation
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:34:13-49
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:36:4-36
 	android:label
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:33:13-45
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:33:13-45
 	android:configChanges
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:35:4-65
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:35:4-65
 	android:name
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:32:13-67
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:32:13-67
 intent-filter#android.intent.action.MAIN+android.intent.category.DEFAULT+android.intent.category.LAUNCHER
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:39:13-43:29
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:39:13-43:29
 action#android.intent.action.MAIN
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:40:17-69
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:40:17-69
 	android:name
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:40:25-66
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:40:25-66
 category#android.intent.category.LAUNCHER
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:41:17-77
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:41:17-77
 	android:name
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:41:27-74
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:41:27-74
 category#android.intent.category.DEFAULT
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:42:17-75
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:42:17-75
 	android:name
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:42:27-73
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:42:27-73
 intent-filter#android.intent.category.DEFAULT+android.media.action.IMAGE_CAPTURE
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:44:13-47:29
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:44:13-47:29
 action#android.media.action.IMAGE_CAPTURE
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:45:17-77
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:45:17-77
 	android:name
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:45:25-74
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:45:25-74
 intent-filter#android.intent.category.DEFAULT+android.media.action.IMAGE_CAPTURE_SECURE
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:48:13-51:29
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:48:13-51:29
 action#android.media.action.IMAGE_CAPTURE_SECURE
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:49:17-84
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:49:17-84
 	android:name
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:49:25-81
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:49:25-81
 intent-filter#android.intent.category.DEFAULT+android.media.action.STILL_IMAGE_CAMERA
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:52:13-55:29
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:52:13-55:29
 action#android.media.action.STILL_IMAGE_CAMERA
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:53:17-82
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:53:17-82
 	android:name
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:53:25-79
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:53:25-79
 intent-filter#android.intent.category.DEFAULT+android.media.action.STILL_IMAGE_CAMERA_SECURE
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:56:13-59:29
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:56:13-59:29
 action#android.media.action.STILL_IMAGE_CAMERA_SECURE
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:57:17-89
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:57:17-89
 	android:name
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:57:25-86
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:57:25-86
 intent-filter#android.intent.category.DEFAULT+android.media.action.VIDEO_CAMERA
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:60:13-63:29
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:60:13-63:29
 action#android.media.action.VIDEO_CAMERA
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:61:17-76
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:61:17-76
 	android:name
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:61:25-73
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:61:25-73
 intent-filter#android.intent.category.DEFAULT+android.media.action.VIDEO_CAPTURE
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:64:4-67:20
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:64:4-67:20
 action#android.media.action.VIDEO_CAPTURE
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:65:5-64
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:65:5-64
 	android:name
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:65:13-62
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:65:13-62
 activity#net.sourceforge.opencamera.TakePhoto
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:70:9-79:20
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:70:9-79:20
 	android:screenOrientation
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:74:13-49
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:74:13-49
 	android:label
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:72:13-47
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:72:13-47
 	android:excludeFromRecents
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:77:4-37
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:77:4-37
 	android:configChanges
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:75:4-65
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:75:4-65
 	android:icon
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:73:10-57
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:73:10-57
 	android:taskAffinity
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:76:4-27
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:76:4-27
 	android:name
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:71:13-37
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:71:13-37
 receiver#net.sourceforge.opencamera.MyWidgetProvider
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:81:9-94:14
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:81:9-94:14
 	android:label
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:83:7-39
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:83:7-39
 	android:icon
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:82:7-41
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:82:7-41
 	android:name
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:84:7-38
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:84:7-38
 intent-filter#android.appwidget.action.APPWIDGET_UPDATE
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:85:7-87:23
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:85:7-87:23
 action#android.appwidget.action.APPWIDGET_UPDATE
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:86:12-79
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:86:12-79
 	android:name
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:86:20-76
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:86:20-76
 meta-data#android.appwidget.provider
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:91:7-93:48
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:91:7-93:48
 	android:resource
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:93:10-45
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:93:10-45
 	android:name
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:92:10-51
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:92:10-51
 receiver#net.sourceforge.opencamera.MyWidgetProviderTakePhoto
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:96:9-106:14
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:96:9-106:14
 	android:label
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:98:13-47
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:98:13-47
 	android:icon
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:97:7-54
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:97:7-54
 	android:name
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:99:7-47
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:99:7-47
 service#net.sourceforge.opencamera.MyTileService
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:108:9-116:19
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:108:9-116:19
 	android:label
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:111:13-43
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:111:13-43
 	android:permission
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:112:13-77
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:112:13-77
 	android:icon
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:110:13-64
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:110:13-64
 	android:name
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:109:13-68
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:109:13-68
 intent-filter#android.service.quicksettings.action.QS_TILE
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:113:13-115:29
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:113:13-115:29
 action#android.service.quicksettings.action.QS_TILE
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:114:17-87
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:114:17-87
 	android:name
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:114:25-84
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:114:25-84
 service#net.sourceforge.opencamera.MyTileServiceVideo
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:118:9-126:19
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:118:9-126:19
 	android:label
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:121:13-49
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:121:13-49
 	android:permission
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:122:13-77
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:122:13-77
 	android:icon
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:120:13-60
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:120:13-60
 	android:name
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:119:13-73
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:119:13-73
 service#net.sourceforge.opencamera.MyTileServiceFrontCamera
-ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:128:9-136:19
+ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:128:9-136:19
 	android:label
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:131:13-43
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:131:13-43
 	android:permission
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:132:13-77
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:132:13-77
 	android:icon
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:130:13-56
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:130:13-56
 	android:name
-		ADDED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml:129:13-79
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml:129:13-79
 uses-sdk
-INJECTED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:design:24.2.0] C:\Users\CTI-OBD\.android\build-cache\9e78febb5dd64088fe87bd6f5ba47f3e793e8af9\output\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:appcompat-v7:24.2.0] C:\Users\CTI-OBD\.android\build-cache\f2d300d9bb4764fc1e8419350f8d50574f8dc36e\output\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:24.2.0] C:\Users\CTI-OBD\.android\build-cache\c901ebd27d96f17a5c344ce30b136de9159eec44\output\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:24.2.0] C:\Users\CTI-OBD\.android\build-cache\8afb03a9e8287355044eda9e34016eae3ce3a5ad\output\AndroidManifest.xml:21:5-43
-MERGED from [com.android.support:recyclerview-v7:24.2.0] C:\Users\CTI-OBD\.android\build-cache\fdfbac599976f20075c86842327cfa1627cbe9c0\output\AndroidManifest.xml:20:5-43
-MERGED from [CherryCam:library:unspecified] I:\Randy\Projects\Android\CherryCam\library\build\intermediates\bundles\default\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:support-v4:24.2.0] C:\Users\CTI-OBD\.android\build-cache\ae2f2ffb551dd42219b7f5acecb3fe7396474184\output\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:24.2.0] C:\Users\CTI-OBD\.android\build-cache\50ecee9f54c879c0c0503809a57c357d1689359b\output\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-core-utils:24.2.0] C:\Users\CTI-OBD\.android\build-cache\5a540dfffd2d81b618fafc59e7b9beb8669f7136\output\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-media-compat:24.2.0] C:\Users\CTI-OBD\.android\build-cache\7b6dae452738c071b2b1def67de8344bbb44e924\output\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:24.2.0] C:\Users\CTI-OBD\.android\build-cache\3e8f888a46fcf14edddeb3109ec2887c4fe70071\output\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:24.2.0] C:\Users\CTI-OBD\.android\build-cache\bd64b8e9141b7ac035f9e8a07be2a2cb04b226c7\output\AndroidManifest.xml:21:5-23:58
+INJECTED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml
+INJECTED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:design:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\design-24.2.0.aar\61d17de898bf0bc1b46adfce866091f6\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:design:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\design-24.2.0.aar\61d17de898bf0bc1b46adfce866091f6\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\appcompat-v7-24.2.0.aar\8bec291de415cf7f6794a247691573b2\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\appcompat-v7-24.2.0.aar\8bec291de415cf7f6794a247691573b2\AndroidManifest.xml:21:5-23:78
+MERGED from [:library] E:\10-09-17\Procamera\library\build\intermediates\manifests\full\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:library] E:\10-09-17\Procamera\library\build\intermediates\manifests\full\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-v4:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\support-v4-24.2.0.aar\b647d077f6f696c2cd0391e7074d8d10\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\support-v4-24.2.0.aar\b647d077f6f696c2cd0391e7074d8d10\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:multidex:1.0.2] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\51671a98aad06d2c5a045fa8bd8be061\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:multidex:1.0.2] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\51671a98aad06d2c5a045fa8bd8be061\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:animated-vector-drawable:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-24.2.0.aar\bc348edde82952a1b4b2472ccf28c4e0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-24.2.0.aar\bc348edde82952a1b4b2472ccf28c4e0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-24.2.0.aar\1b1a01eaca93c6462a70c3fb2c5a389f\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-vector-drawable:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-24.2.0.aar\1b1a01eaca93c6462a70c3fb2c5a389f\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:recyclerview-v7:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-24.2.0.aar\38f2f4a852f09100fd955948e8785113\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-24.2.0.aar\38f2f4a852f09100fd955948e8785113\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-fragment:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\support-fragment-24.2.0.aar\f56ef988c2b28d5469b514b6b2656f69\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\support-fragment-24.2.0.aar\f56ef988c2b28d5469b514b6b2656f69\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-ui:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\support-core-ui-24.2.0.aar\d3523846c5eb737009873d9904ce63d8\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\support-core-ui-24.2.0.aar\d3523846c5eb737009873d9904ce63d8\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\support-core-utils-24.2.0.aar\dc7c08bca7d55a4b8e3118e0e2e9e2e1\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\support-core-utils-24.2.0.aar\dc7c08bca7d55a4b8e3118e0e2e9e2e1\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-media-compat:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\support-media-compat-24.2.0.aar\d03544ff4e7164e4ae0d90a7085cea2c\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\support-media-compat-24.2.0.aar\d03544ff4e7164e4ae0d90a7085cea2c\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-compat:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\support-compat-24.2.0.aar\4684bc156d0fa4daf173ca9cb940aca5\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\support-compat-24.2.0.aar\4684bc156d0fa4daf173ca9cb940aca5\AndroidManifest.xml:21:5-23:58
+INJECTED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml
+INJECTED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml
 	tools:overrideLibrary
-		ADDED from [com.android.support:appcompat-v7:24.2.0] C:\Users\CTI-OBD\.android\build-cache\f2d300d9bb4764fc1e8419350f8d50574f8dc36e\output\AndroidManifest.xml:23:9-75
+		ADDED from [com.android.support:appcompat-v7:24.2.0] C:\Users\CTI OVS\.gradle\caches\transforms-1\files-1.1\appcompat-v7-24.2.0.aar\8bec291de415cf7f6794a247691573b2\AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
-		INJECTED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml
-		INJECTED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml
+		INJECTED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml
+		INJECTED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml
-		INJECTED from I:\Randy\Projects\Android\CherryCam\app\src\main\AndroidManifest.xml
+		INJECTED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml
+		ADDED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml
+		INJECTED from E:\10-09-17\Procamera\app\src\main\AndroidManifest.xml

@@ -2,5 +2,9 @@
     {
         "merged": "I:\\Randy\\Projects\\Android\\CherryCam\\library\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\psts_background_tab.xml",
         "source": "I:\\Randy\\Projects\\Android\\CherryCam\\library\\res\\drawable-v21\\psts_background_tab.xml"
+    },
+    {
+        "merged": "E:\\10-09-17\\Procamera\\library\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\psts_background_tab.xml",
+        "source": "E:\\10-09-17\\Procamera\\library\\res\\drawable-v21\\psts_background_tab.xml"
     }
 ]

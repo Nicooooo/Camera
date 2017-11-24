@@ -74,19 +74,7 @@ public class PROMode extends Fragment implements View.OnClickListener, SeekBar.O
     private TextView contrast_label;
     private TextView wb_label;
     private HorizontalScrollView horizontalscrollview;
-    private TextView focus_auto;
-    private ImageView macro;
-    private ImageView mountain;
-    private TextView shutter_auto;
-    private TextView shutter_1s;
-    private TextView shutter_2s;
-    private TextView shutter_4s;
-    private TextView shutter_8s;
-    private TextView iso_auto;
-    private TextView iso_100;
-    private TextView iso_200;
-    private TextView iso_400;
-    private TextView iso_800;
+
     private boolean isArrownShown = true;
 
      @Override

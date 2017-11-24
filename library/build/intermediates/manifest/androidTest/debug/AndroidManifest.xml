@@ -13,7 +13,7 @@
         android:label="Tests for com.astuetz.pagerslidingtabstrip.test"
         android:targetPackage="com.astuetz.pagerslidingtabstrip.test" />
 
-    <application>
+    <application android:debuggable="true" >
         <uses-library android:name="android.test.runner" />
     </application>
 

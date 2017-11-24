@@ -1,18 +1,252 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/fourfrag"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/transparent" >
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="bottom"
+    android:orientation="vertical">
 
     <TextView
-        android:id="@+id/tvFragFourth"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="100dp"
+        android:id="@+id/wb_label"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:textSize="26dp"
-        android:text="TextView" />
+        android:textSize="14sp"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@android:color/white"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/iso_label"
+        android:layout_width="wrap_content"
+        android:textSize="14sp"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@android:color/white"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/shutter_label"
+        android:layout_width="wrap_content"
+        android:textSize="14sp"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@android:color/white"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/focus_label"
+        android:layout_width="wrap_content"
+        android:textSize="14sp"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@android:color/white"
+        android:layout_height="wrap_content" />
+
+
+
+    <SeekBar
+        android:id="@+id/seekBar_whiten"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:max="4"
+        android:progress="0"
+        android:progressTint="@android:color/transparent"
+        android:thumb="@drawable/thumb" />
+
+    <SeekBar
+        android:id="@+id/seekBar_smooth"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:max="4"
+        android:progress="0"
+        android:visibility="gone"
+        android:progressTint="@android:color/transparent"
+        android:thumb="@drawable/thumb" />
+
+    <SeekBar
+        android:id="@+id/seekBar_slim"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:max="4"
+        android:progress="0"
+        android:visibility="gone"
+        android:progressTint="@android:color/transparent"
+        android:thumb="@drawable/thumb" />
+
+    <SeekBar
+        android:id="@+id/seekBar_enlarge"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:max="24"
+        android:progress="12"
+        android:visibility="gone"
+        android:progressTint="@android:color/transparent"
+        android:thumb="@drawable/thumb" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/left_pro"
+            android:layout_width="30dp"
+            android:src="@drawable/lessthan"
+            android:background="@null"
+            android:layout_height="30dp" />
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalscrollview"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:scrollbars="none"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/layout_whiten"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/whiten"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/fb_whitening_normal"
+                            android:background="@null"
+                            android:layout_gravity="center_horizontal"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="Face White"
+                            android:textAlignment="center"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/layout_smooth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/smooth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitCenter"
+                            android:background="@null"
+                            android:src="@drawable/fb_smooth_normal"
+                            android:layout_gravity="center_horizontal"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="Smooth"
+                            android:textAlignment="center"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/layout_slim"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/slim"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitCenter"
+                            android:background="@null"
+                            android:src="@drawable/fb_sharp_normal"
+                            android:layout_gravity="center_horizontal" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="Slim"
+                            android:textAlignment="center"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/layout_enlarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/enlarge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/fb_eye_normal"
+                            android:background="@null"
+                            android:layout_gravity="center_horizontal" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="Eye enlarge"
+                            android:textAlignment="center"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <ImageButton
+            android:id="@+id/right_pro"
+            android:layout_width="30dp"
+            android:src="@drawable/back"
+            android:background="@null"
+            android:layout_height="30dp" />
+
+    </LinearLayout>
+
+
+
 </LinearLayout>
