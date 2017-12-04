@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="OnScreenFacebeautyBg">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">@dimen/picker_button_size</item>
+        <item name="android:background">@drawable/bg_icon</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="OnScreenFacebeautyIcon">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">bottom|left</item>
+        <item name ="android:orientation">vertical</item>
+        <item name = "android:paddingBottom">92dp</item>
+        <item name="android:visibility">visible</item>
+    </style>
+
+    <style name="OnScreenFacebeautySeekBar">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">180dp</item>
+        <item name="android:focusable">true</item>
+        <item name="android:visibility">invisible</item>
+    </style>
+
+    <style name="OnScreenFacebeautyFixed">
+        <item name="android:layout_height">@dimen/picker_button_size</item>
+        <item name="android:layout_width">@dimen/picker_button_size</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">@drawable/bg_pressed</item>
+        <item name="android:visibility">invisible</item>
+    </style>
+
+</resources>
