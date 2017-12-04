@@ -485,6 +485,7 @@ public class PROMode extends Fragment implements View.OnClickListener, SeekBar.O
                     Log.d(TAG,"horizontalscrollview right 2");
                     left_pro.setVisibility(View.VISIBLE);
                     right_pro.setVisibility(View.INVISIBLE);
+
                 }
                 break;
         }

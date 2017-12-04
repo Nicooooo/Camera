@@ -1,4 +1,4 @@
-#Fri Dec 01 10:13:25 CST 2017
-base.0=E\:\\10-09-17\\Procamera\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\3
+#Mon Dec 04 11:40:52 CST 2017
+base.0=E\:\\10-09-17\\Procamera\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\22
 renamed.0=classes.dex
-file.0=E\:\\10-09-17\\Procamera\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\3\\classes.dex
+file.0=E\:\\10-09-17\\Procamera\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\22\\classes.dex
