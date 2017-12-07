@@ -19,6 +19,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import net.sourceforge.opencamera.MainActivity;
@@ -53,6 +54,7 @@ public class FaceBeauty extends Fragment implements View.OnClickListener, SeekBa
 
     private static final int[] FACE_BEAUTY_ICONS_NORMAL = new int[NUMBER_FACE_BEAUTY_ICON];
     private static final int[] FACE_BEAUTY_ICONS_HIGHTLIGHT = new int[NUMBER_FACE_BEAUTY_ICON];
+    String current_beauty = null;
 
     static {
         FACE_BEAUTY_ICONS_NORMAL[FACE_BEAUTY_WRINKLE_REMOVE] = R.drawable.fb_smooth_normal;
@@ -72,7 +74,7 @@ public class FaceBeauty extends Fragment implements View.OnClickListener, SeekBa
         FACE_BEAUTY_ICONS_HIGHTLIGHT[FACE_BEAUTY_ICON] = R.drawable.ic_mode_facebeauty_focus;
     }
 
-    private static final String TAG = "FirstFragment";
+    private static final String TAG = "FaceBeauty";
     private OrientationEventListener orientationEventListener;
 
     private ImageButton btnWB;
@@ -83,6 +85,8 @@ public class FaceBeauty extends Fragment implements View.OnClickListener, SeekBa
     private ImageButton smooth;
     private ImageButton slim;
     private ImageButton enlarge;
+    private ImageButton arrow_up;
+    private ImageButton arrow_down;
     private SeekBar seekBar_faceBeauty;
     private SeekBar seekBar_whiten;
     private SeekBar seekBar_smooth;
@@ -105,6 +109,13 @@ public class FaceBeauty extends Fragment implements View.OnClickListener, SeekBa
         this.mainActivity = (MainActivity)getActivity();
         preview = mainActivity.getPreview();
 
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(mainActivity);
+        SharedPreferences.Editor editor = null;
+        editor = sharedPreferences.edit();
+        editor.putString(PreferenceKeys.getBeauty(), "whiten");
+
+        current_beauty = "whiten";
+
     }
 
     @Override
@@ -118,14 +129,15 @@ public class FaceBeauty extends Fragment implements View.OnClickListener, SeekBa
         editor.putBoolean(PreferenceKeys.getProModePreferenceKey(), true);
         editor.apply();
 
+        Log.d(TAG, "facebeauty_indicator");
         whiten = (ImageButton) v.findViewById(R.id.whiten);
         smooth = (ImageButton) v.findViewById(R.id.smooth);
         slim = (ImageButton) v.findViewById(R.id.slim);
         enlarge = (ImageButton) v.findViewById(R.id.enlarge);
-        seekBar_whiten = (SeekBar) v.findViewById(R.id.seekBar_whiten);
-        seekBar_smooth = (SeekBar) v.findViewById(R.id.seekBar_smooth);
-        seekBar_slim = (SeekBar) v.findViewById(R.id.seekBar_slim);
-        seekBar_enlarge = (SeekBar) v.findViewById(R.id.seekBar_enlarge);
+//        seekBar_whiten = (SeekBar) v.findViewById(R.id.seekBar_whiten);
+//        seekBar_smooth = (SeekBar) v.findViewById(R.id.seekBar_smooth);
+//        seekBar_slim = (SeekBar) v.findViewById(R.id.seekBar_slim);
+//        seekBar_enlarge = (SeekBar) v.findViewById(R.id.seekBar_enlarge);
         seekBar_faceBeauty = (SeekBar) v.findViewById(R.id.seekBar_faceBeauty);
         layout_whiten = (LinearLayout) v.findViewById(R.id.layout_whiten);
         layout_smooth= (LinearLayout) v.findViewById(R.id.layout_smooth);
@@ -136,19 +148,24 @@ public class FaceBeauty extends Fragment implements View.OnClickListener, SeekBa
         lbl_slim = (TextView) v.findViewById(R.id.slim_label);
         lbl_enlarge = (TextView) v.findViewById(R.id.enlarge_label);
         horizontalscrollview = (HorizontalScrollView) v.findViewById(R.id.horizontalscrollview);
+        arrow_up = (ImageButton) v.findViewById(R.id.facebeauty_arrow_up);
+        arrow_down = (ImageButton) v.findViewById(R.id.facebeauty_arrow_down);
 
-        whiten.setImageResource(R.drawable.fb_whitening_focus);
+//        whiten.setImageResource(R.drawable.fb_whitening_focus);
 
         whiten.setOnClickListener(this);
         smooth.setOnClickListener(this);
         slim.setOnClickListener(this);
         enlarge.setOnClickListener(this);
+        arrow_up.setOnClickListener(this);
+        arrow_down.setOnClickListener(this);
 
-        seekBar_whiten.setOnSeekBarChangeListener(this);
-        seekBar_smooth.setOnSeekBarChangeListener(this);
-        seekBar_slim.setOnSeekBarChangeListener(this);
-        seekBar_enlarge.setOnSeekBarChangeListener(this);
+//        seekBar_whiten.setOnSeekBarChangeListener(this);
+//        seekBar_smooth.setOnSeekBarChangeListener(this);
+//        seekBar_slim.setOnSeekBarChangeListener(this);
+//        seekBar_enlarge.setOnSeekBarChangeListener(this);
         seekBar_faceBeauty.setOnSeekBarChangeListener(this);
+
 
         return v;
     }
@@ -181,19 +198,69 @@ public class FaceBeauty extends Fragment implements View.OnClickListener, SeekBa
 
     @Override
     public void onClick(View v) {
+        final MainActivity main_activity = (MainActivity)getContext();
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(main_activity);
+        SharedPreferences.Editor editor = null;
 
         switch (v.getId()){
             case R.id.whiten:
+                whiten.setImageResource(R.drawable.fb_whitening_focus);
+                smooth.setImageResource(R.drawable.fb_smooth_normal);
+                slim.setImageResource(R.drawable.fb_sharp_normal);
+                enlarge.setImageResource(R.drawable.fb_eye_normal);
 
+                editor = sharedPreferences.edit();
+                editor.putString(PreferenceKeys.getBeauty(), "whiten");
+
+                current_beauty = "whiten";
                 break;
+
             case R.id.smooth:
+                whiten.setImageResource(R.drawable.fb_whitening_normal);
+                smooth.setImageResource(R.drawable.fb_smooth_focus);
+                slim.setImageResource(R.drawable.fb_sharp_normal);
+                enlarge.setImageResource(R.drawable.fb_eye_normal);
 
+                editor = sharedPreferences.edit();
+                editor.putString(PreferenceKeys.getBeauty(), "smooth");
+
+                current_beauty = "smooth";
                 break;
+
             case R.id.slim:
+                whiten.setImageResource(R.drawable.fb_whitening_normal);
+                smooth.setImageResource(R.drawable.fb_smooth_normal);
+                slim.setImageResource(R.drawable.fb_sharp_focus);
+                enlarge.setImageResource(R.drawable.fb_eye_normal);
 
+                editor = sharedPreferences.edit();
+                editor.putString(PreferenceKeys.getBeauty(), "slim");
+
+                current_beauty = "slim";
                 break;
-            case R.id.enlarge:
 
+            case R.id.enlarge:
+                whiten.setImageResource(R.drawable.fb_whitening_normal);
+                smooth.setImageResource(R.drawable.fb_smooth_normal);
+                slim.setImageResource(R.drawable.fb_sharp_normal);
+                enlarge.setImageResource(R.drawable.fb_eye_focus);
+
+                editor = sharedPreferences.edit();
+                editor.putString(PreferenceKeys.getBeauty(), "enlarge");
+
+                current_beauty = "enlarge";
+                break;
+
+            case R.id.facebeauty_arrow_up :
+                arrow_down.setVisibility(View.VISIBLE);
+                arrow_up.setVisibility(View.GONE);
+                horizontalscrollview.setVisibility(View.VISIBLE);
+                break;
+
+            case R.id.facebeauty_arrow_down :
+                arrow_up.setVisibility(View.VISIBLE);
+                arrow_down.setVisibility(View.GONE);
+                horizontalscrollview.setVisibility(View.GONE);
                 break;
 
             default:
@@ -205,7 +272,35 @@ public class FaceBeauty extends Fragment implements View.OnClickListener, SeekBa
 
     @Override
     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+        final MainActivity main_activity = (MainActivity)getContext();
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(main_activity);
+        SharedPreferences.Editor editor = null;
 
+        switch (seekBar.getId()){
+            case R.id.seekBar_faceBeauty:
+
+                current_beauty = sharedPreferences.getString(PreferenceKeys.getBeauty(), current_beauty);
+                Log.d(TAG, "progress " + current_beauty );
+                if (current_beauty.equals("whiten"))
+                {
+                    Log.d(TAG, "progress " + " whiten1 " );
+                }
+                else if (current_beauty.equals("smooth"))
+                {
+                    Log.d(TAG, "progress " + " smooth2 "  );
+                }
+                else if (current_beauty.equals("slim"))
+                {
+                    Log.d(TAG, "progress " + " slim3 "   );
+                }
+                else if (current_beauty.equals("enlarge"))
+                {
+                    Log.d(TAG, "progress " + " enlarge4 "  );
+                }
+
+
+                break;
+        }
     }
 
     @Override

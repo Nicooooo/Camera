@@ -2609,7 +2609,7 @@ public class MainUI {
 				// needed to support hardware menu button
 				// tested successfully on Samsung S3 (via RTL)
 				// see http://stackoverflow.com/questions/8264611/how-to-detect-when-user-presses-menu-key-on-their-android-device
-				main_activity.openSettings();
+//				main_activity.openSettings();
 				return true;
 			}
 			case KeyEvent.KEYCODE_CAMERA:

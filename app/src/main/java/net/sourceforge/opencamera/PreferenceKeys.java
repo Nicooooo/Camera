@@ -459,4 +459,7 @@ public class PreferenceKeys {
     public static  String getThemeColor(){ return "preference_theme_color"; }
 
     public static String getProModePreferenceKey() {return "preference_promode";}
+
+    public static String getBeauty() {return "whiten";}
+
 }
