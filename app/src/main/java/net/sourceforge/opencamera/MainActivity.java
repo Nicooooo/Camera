@@ -3,6 +3,7 @@ package net.sourceforge.opencamera;
 import net.sourceforge.opencamera.CameraController.CameraController;
 import net.sourceforge.opencamera.CameraController.CameraControllerManager2;
 import net.sourceforge.opencamera.Preview.Preview;
+import net.sourceforge.opencamera.UI.FaceBeauty;
 import net.sourceforge.opencamera.UI.FirstFragment;
 import net.sourceforge.opencamera.UI.FolderChooserDialog;
 import net.sourceforge.opencamera.UI.FourthFragment;
@@ -106,6 +107,7 @@ public class MainActivity extends AppCompatActivity implements AudioListener.Aud
 	private Sensor mSensorMagnetic;
 	private MainUI mainUI;
     public PROMode proMode;
+    public FaceBeauty faceBeauty;
 	private TextFormatter textFormatter;
 	private MyApplicationInterface applicationInterface;
 	private Preview preview;
@@ -308,6 +310,10 @@ public class MainActivity extends AppCompatActivity implements AudioListener.Aud
                 if(proMode != null){
                     proMode.orientationChanged(getPreview().getUIRotation());
                 }
+                if (faceBeauty!=null)
+				{
+					faceBeauty.orientationChanged(getPreview().getUIRotation());
+				}
 			}
         };
 		if( MyDebug.LOG )
@@ -3371,7 +3377,8 @@ public class MainActivity extends AppCompatActivity implements AudioListener.Aud
                 case 2:
                     return ThirdFragment.newInstance( "");
                 case 3:
-                    return FourthFragment.newInstance( "");
+					faceBeauty = new FaceBeauty();
+					return faceBeauty;
                 case 4:
                     proMode = new PROMode();
                     return proMode;
