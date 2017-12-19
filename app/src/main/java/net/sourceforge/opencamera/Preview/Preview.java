@@ -18,6 +18,7 @@ import android.graphics.Point;
 import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.SurfaceTexture;
+import android.hardware.Camera;
 import android.hardware.SensorEvent;
 import android.hardware.SensorManager;
 import android.hardware.camera2.DngCreator;
@@ -80,6 +81,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Timer;
 import java.util.TimerTask;
+import android.hardware.Camera.FaceDetectionListener;
 
 /** This class was originally named due to encapsulating the camera preview,
  *  but in practice it's grown to more than this, and includes most of the
@@ -94,7 +96,7 @@ public class Preview implements SurfaceHolder.Callback, TextureView.SurfaceTextu
 
 	private final boolean using_android_l;
 
-	private final ApplicationInterface applicationInterface;
+	public final ApplicationInterface applicationInterface;
 	private final CameraSurface cameraSurface;
 	private CanvasView canvasView;
 	private boolean set_preview_size;
@@ -215,7 +217,7 @@ public class Preview implements SurfaceHolder.Callback, TextureView.SurfaceTextu
 
 	private boolean supports_face_detection;
 	private boolean using_face_detection;
-	private CameraController.Face [] faces_detected;
+	public CameraController.Face [] faces_detected;
 	private boolean supports_video_stabilization;
 	private boolean can_disable_shutter_sound;
 	private boolean has_focus_area;
@@ -266,6 +268,8 @@ public class Preview implements SurfaceHolder.Callback, TextureView.SurfaceTextu
 	public volatile boolean test_fail_open_camera;
 	public volatile boolean test_video_failure;
 	String spFlash = "";
+	CameraController1 cameraController1;
+	Camera camera;
 
 	private MyApplicationInterface myApplicationInterface;
 
@@ -950,7 +954,7 @@ public class Preview implements SurfaceHolder.Callback, TextureView.SurfaceTextu
 		}
 	}
 
-	private void closeCamera() {
+	public void closeCamera() {
 		long debug_time = 0;
 //		if( MyDebug.LOG ) {
 			Log.d(TAG, "closeCamera()");
@@ -1166,6 +1170,7 @@ public class Preview implements SurfaceHolder.Callback, TextureView.SurfaceTextu
 		}*/
 		try {
 			int cameraId = applicationInterface.getCameraIdPref();
+
 			if( cameraId < 0 || cameraId >= camera_controller_manager.getNumberOfCameras() ) {
 				if( MyDebug.LOG )
 					Log.d(TAG, "invalid cameraId: " + cameraId);
@@ -1191,6 +1196,7 @@ public class Preview implements SurfaceHolder.Callback, TextureView.SurfaceTextu
 					}
 				}
 			};
+
 	        if( using_android_l ) {
 				CameraController.ErrorCallback previewErrorCallback = new CameraController.ErrorCallback() {
 					public void onError() {
@@ -1286,8 +1292,8 @@ public class Preview implements SurfaceHolder.Callback, TextureView.SurfaceTextu
 	 * we'll take a photo immediately after startup).
 	 */
 	public void setupCamera(boolean take_photo) {
-		if( MyDebug.LOG )
-			Log.d(TAG, "setupCamera()");
+//		if( MyDebug.LOG )
+			Log.d(TAG, "setupCamera()" + take_photo);
 		long debug_time = 0;
 		if( MyDebug.LOG ) {
 			debug_time = System.currentTimeMillis();
@@ -1308,8 +1314,9 @@ public class Preview implements SurfaceHolder.Callback, TextureView.SurfaceTextu
 		// although I've now fixed this at the level where we close the settings, I've put this guard here, just in case the problem occurs from elsewhere
 		// we'll switch to the user-requested focus by calling setFocusPref() from setupCameraParameters() below
 		this.updateFocusForVideo();
-
+Log.d(TAG, "dddddddddddddddddd");
 		setupCameraParameters();
+
 
 		// now switch to video if saved
 		boolean saved_is_video = applicationInterface.isVideoPref();
@@ -1361,6 +1368,10 @@ public class Preview implements SurfaceHolder.Callback, TextureView.SurfaceTextu
 		}
 		// Must call startCameraPreview after checking if face detection is present - probably best to call it after setting all parameters that we want
 		startCameraPreview();
+		Log.d(TAG, "facedetect1");
+
+
+
 		if( MyDebug.LOG ) {
 			Log.d(TAG, "setupCamera: time after starting camera preview: " + (System.currentTimeMillis() - debug_time));
 		}
@@ -1418,10 +1429,11 @@ public class Preview implements SurfaceHolder.Callback, TextureView.SurfaceTextu
 	    if( MyDebug.LOG ) {
 			Log.d(TAG, "setupCamera: total time after setupCamera: " + (System.currentTimeMillis() - debug_time));
 		}
+		camera_controller.startFaceDetection();
 	}
 
 	private void setupCameraParameters() {
-		if( MyDebug.LOG )
+//		if( MyDebug.LOG )
 			Log.d(TAG, "setupCameraParameters()");
 		long debug_time = 0;
 		if( MyDebug.LOG ) {
@@ -1495,8 +1507,9 @@ public class Preview implements SurfaceHolder.Callback, TextureView.SurfaceTextu
 		}
 		
 		{
-			if( MyDebug.LOG )
+//			if( MyDebug.LOG )
 				Log.d(TAG, "set up face detection");
+
 			// get face detection supported
 			this.faces_detected = null;
 			if( this.supports_face_detection ) {
@@ -1505,16 +1518,18 @@ public class Preview implements SurfaceHolder.Callback, TextureView.SurfaceTextu
 			else {
 				this.using_face_detection = false;
 			}
-			if( MyDebug.LOG ) {
+//			if( MyDebug.LOG ) {
 				Log.d(TAG, "supports_face_detection?: " + supports_face_detection);
 				Log.d(TAG, "using_face_detection?: " + using_face_detection);
-			}
+//			}
 			if( this.using_face_detection ) {
+			Log.d(TAG, "usingfacedetect1 " + using_face_detection );
 				class MyFaceDetectionListener implements CameraController.FaceDetectionListener {
 				    @Override
 				    public void onFaceDetection(CameraController.Face[] faces) {
 				    	faces_detected = new CameraController.Face[faces.length];
-				    	System.arraycopy(faces, 0, faces_detected, 0, faces.length);				    	
+				    	System.arraycopy(faces, 0, faces_detected, 0, faces.length);
+						Log.d(TAG, "usingfacedetect2");
 				    }
 				}
 				camera_controller.setFaceDetectionListener(new MyFaceDetectionListener());
@@ -2806,6 +2821,7 @@ public class Preview implements SurfaceHolder.Callback, TextureView.SurfaceTextu
 	}*/
 
 	public boolean canSwitchCamera() {
+		Log.d(TAG, " canSwitchCamera 2");
 		if( this.phase == PHASE_TAKING_PHOTO ) {
 			// just to be safe - risk of cancelling the autofocus before taking a photo, or otherwise messing things up
 			if( MyDebug.LOG )
@@ -4728,6 +4744,7 @@ public class Preview implements SurfaceHolder.Callback, TextureView.SurfaceTextu
     }
     
     public void startCameraPreview() {
+    	Log.d(TAG, "startcamerapreview");
 		long debug_time = 0;
 		if( MyDebug.LOG ) {
 			Log.d(TAG, "startCameraPreview");
@@ -4743,6 +4760,7 @@ public class Preview implements SurfaceHolder.Callback, TextureView.SurfaceTextu
 				camera_controller.setRecordingHint(this.is_video);
 			}
 			setPreviewFps();
+
     		try {
     			camera_controller.startPreview();
 		    	count_cameraStartPreview++;
@@ -4759,7 +4777,7 @@ public class Preview implements SurfaceHolder.Callback, TextureView.SurfaceTextu
 				Log.d(TAG, "startCameraPreview: time after starting camera preview: " + (System.currentTimeMillis() - debug_time));
 			}
 			if( this.using_face_detection ) {
-				if( MyDebug.LOG )
+//				if( MyDebug.LOG )
 					Log.d(TAG, "start face detection");
 				camera_controller.startFaceDetection();
 				faces_detected = null;
@@ -4970,7 +4988,7 @@ public class Preview implements SurfaceHolder.Callback, TextureView.SurfaceTextu
     }
 
     public boolean supportsFaceDetection() {
-		if( MyDebug.LOG )
+//		if( MyDebug.LOG )
 			Log.d(TAG, "supportsFaceDetection");
     	return supports_face_detection;
     }
@@ -5208,15 +5226,16 @@ public class Preview implements SurfaceHolder.Callback, TextureView.SurfaceTextu
     }
 
     public void onPause() {
-		if( MyDebug.LOG )
-			Log.d(TAG, "onPause");
+//		if( MyDebug.LOG )
+			Log.d(TAG, "onPause " + this.has_surface);
 		this.app_is_paused = true;
 		this.closeCamera();
     }
 
     public void closeActivity() {
 		Log.d(TAG, " close ");
-		this.has_surface = false;
+		this.has_surface = true;
+		this.app_is_paused = false;
 		this.closeCamera();
 	}
 

@@ -125,54 +125,14 @@ public class FaceBeauty extends Fragment implements View.OnClickListener, SeekBa
         super.onCreate(savedInstanceState);
         this.mainActivity = (MainActivity) getActivity();
         preview = mainActivity.getPreview();
-        preview.faces_detected = null;
-        int cameraId = preview.applicationInterface.getCameraIdPref();
 
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(mainActivity);
         SharedPreferences.Editor editor = null;
         editor = sharedPreferences.edit();
         editor.putString(PreferenceKeys.getBeauty(), "whiten");
+        editor.apply();
+
         current_beauty = "whiten";
-
-        editor.putString(PreferenceKeys.getFaceDetectionPreferenceKey(), "true");
-        Log.d(TAG, "1usingfacedetect1");
-        class MyFaceDetectionListener implements CameraController.FaceDetectionListener {
-            @Override
-            public void onFaceDetection(CameraController.Face[] faces) {
-                preview.faces_detected = new CameraController.Face[faces.length];
-                System.arraycopy(faces, 0, preview.faces_detected, 0, faces.length);
-                Log.d(TAG, "1usingfacedetect2");
-            }
-        }
-
-
-        try {
-            CameraController.ErrorCallback cameraErrorCallback = new CameraController.ErrorCallback() {
-                public void onError() {
-                    if( MyDebug.LOG )
-                        Log.e(TAG, "error from CameraController: camera device failed");
-                    if( preview.camera_controller != null ) {
-                        preview.camera_controller = null;
-                        preview.applicationInterface.onCameraError();
-                    }
-                }
-            };
-            CameraController.ErrorCallback previewErrorCallback = new CameraController.ErrorCallback() {
-                public void onError() {
-                    if( MyDebug.LOG )
-                        Log.e(TAG, "error from CameraController: preview failed to start");
-                    preview.applicationInterface.onFailedStartPreview();
-                }
-            };
-            preview.camera_controller = new CameraController2(this.getContext(), cameraId, previewErrorCallback, cameraErrorCallback);
-        } catch (CameraControllerException e) {
-            e.printStackTrace();
-        }
-
-
-        preview.camera_controller.setFaceDetectionListener(new MyFaceDetectionListener());
-        preview.camera_controller.startFaceDetection();
-        Log.d(TAG, "1usingfacedetect3" + preview.camera_controller.startFaceDetection());
     }
 
     @Override
@@ -186,7 +146,6 @@ public class FaceBeauty extends Fragment implements View.OnClickListener, SeekBa
         editor.putBoolean(PreferenceKeys.getProModePreferenceKey(), true);
         editor.apply();
 
-        Log.d(TAG, "facebeauty_indicator");
         whiten = (ImageButton) v.findViewById(R.id.whiten);
         smooth = (ImageButton) v.findViewById(R.id.smooth);
         slim = (ImageButton) v.findViewById(R.id.slim);
@@ -223,8 +182,6 @@ public class FaceBeauty extends Fragment implements View.OnClickListener, SeekBa
 //        seekBar_enlarge.setOnSeekBarChangeListener(this);
         seekBar_faceBeauty.setOnSeekBarChangeListener(this);
 
-        Log.d(TAG, "1usingfacedetect4");
-//        preview.camera_controller.startFaceDetection();
         return v;
     }
 
@@ -271,7 +228,6 @@ public class FaceBeauty extends Fragment implements View.OnClickListener, SeekBa
                 current_beauty = "whiten";
                 whitenLabel = sharedPreferences.getInt("whiten_key", current_progress);
                 seekBar_faceBeauty.setProgress(whitenLabel);
-                Log.d(TAG, " wwwwwwwww w" + current_progress + " qwe " + whitenLabel);
                 break;
 
             case R.id.smooth:
@@ -284,8 +240,6 @@ public class FaceBeauty extends Fragment implements View.OnClickListener, SeekBa
                 current_beauty = "smooth";
                 smoothLabel = sharedPreferences.getInt("smooth_key", current_progress);
                 seekBar_faceBeauty.setProgress(smoothLabel);
-                Log.d(TAG, " wwwwwwwww sm" + current_progress + " qwe " + smoothLabel);
-
                 break;
 
             case R.id.slim:
@@ -298,7 +252,6 @@ public class FaceBeauty extends Fragment implements View.OnClickListener, SeekBa
                 current_beauty = "slim";
                 slimLabel = sharedPreferences.getInt("slim_key", current_progress);
                 seekBar_faceBeauty.setProgress(slimLabel);
-                Log.d(TAG, " wwwwwwwww s" + current_progress + " qwe " + slimLabel);
                 break;
 
             case R.id.enlarge:
@@ -312,7 +265,6 @@ public class FaceBeauty extends Fragment implements View.OnClickListener, SeekBa
                 current_beauty = "enlarge";
                 enlargeLabel = sharedPreferences.getInt("enlarge_key", current_progress);
                 seekBar_faceBeauty.setProgress(enlargeLabel);
-                Log.d(TAG, " wwwwwwwww e" + current_progress + " " + enlargeLabel);
                 break;
 
             case R.id.facebeauty_arrow_up:
@@ -329,9 +281,7 @@ public class FaceBeauty extends Fragment implements View.OnClickListener, SeekBa
 
             default:
                 break;
-
         }
-
     }
 
     @Override
@@ -341,38 +291,27 @@ public class FaceBeauty extends Fragment implements View.OnClickListener, SeekBa
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
         current_progress = progress;
-//        switch (seekBar.getId()){
-
-//            case R.id.seekBar_faceBeauty:
-
         current_beauty = sharedPreferences.getString(PreferenceKeys.getBeauty(), current_beauty);
-        Log.d(TAG, "progress111 " + current_beauty);
         if (current_beauty.equals("whiten")) {
-            Log.d(TAG, "progressw " + " whiten1 " + progress + " / " + current_beauty + " / " + current_progress);
             SharedPreferences sp = main_activity.getSharedPreferences("whiten_pref", Activity.MODE_PRIVATE);
             editor.putInt("whiten_key", progress);
             editor.commit();
 
         } else if (current_beauty.equals("smooth")) {
-            Log.d(TAG, "progressw " + " smooth2 " + progress);
             SharedPreferences sp = main_activity.getSharedPreferences("smooth_pref", Activity.MODE_PRIVATE);
             editor.putInt("smooth_key", progress);
             editor.commit();
 
         } else if (current_beauty.equals("slim")) {
-            Log.d(TAG, "progressw " + " slim3 " + progress);
             SharedPreferences sp = main_activity.getSharedPreferences("slim_pref", Activity.MODE_PRIVATE);
             editor.putInt("slim_key", progress);
             editor.commit();
 
         } else if (current_beauty.equals("enlarge")) {
-            Log.d(TAG, "progressw " + " enlarge4 " + progress);
             SharedPreferences sp = main_activity.getSharedPreferences("enlarge_pref", Activity.MODE_PRIVATE);
             editor.putInt("enlarge_key", progress);
             editor.commit();
         }
-//                break;
-//        }
     }
 
     @Override
@@ -384,26 +323,4 @@ public class FaceBeauty extends Fragment implements View.OnClickListener, SeekBa
     public void onStopTrackingTouch(SeekBar seekBar) {
 
     }
-
-
-    private void setProgressValue(int value) {
-        // because the effects properties list is stored as parameters value
-        // so need revert the value
-        // but the progress bar is revert the max /min , so not need revert
-        seekBar_faceBeauty.setProgress(convertToParamertersValue(value));
-    }
-
-    private int convertToParamertersValue(int value) {
-        // one:in progress bar,the max value is at the end of left,and current
-        // max value is 8;
-        // but in our UI,the max value is at the begin of right.
-        // two:the parameters supported max value is 4 ,min value is -4
-        // above that,the parameters value should be :[native max - current
-        // progress value]
-        return mSupportedMaxValue - value;
-    }
-
-
-
-
 }

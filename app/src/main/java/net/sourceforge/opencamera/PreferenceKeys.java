@@ -460,6 +460,10 @@ public class PreferenceKeys {
 
     public static String getProModePreferenceKey() {return "preference_promode";}
 
-    public static String getBeauty() {return "whiten";}
+    public static String getBeauty() {return "current_beauty";}
+
+    public static String getMode() {
+        return "mode";
+    }
 
 }

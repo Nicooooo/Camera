@@ -188,7 +188,8 @@ public class MyApplicationInterface implements ApplicationInterface {
 			@Override
 			public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels)
 			{
-				Log.d(" Mainact ", " position11 1 ");
+				Log.d(" Mainact ", " position11 1 " + " /// " + position);
+
 
 				if (position == 0 && positionOffsetPixels == 0)  // night
 				{
@@ -209,42 +210,58 @@ public class MyApplicationInterface implements ApplicationInterface {
 				else if (position == 4)  // pro
 				{
 
-
 				}
 			}
 
 			@Override
 			public void onPageSelected(int position)
 			{
-				Log.d(" Mainact ", " position11 2 " );
+				SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(main_activity);
+				SharedPreferences.Editor editor = sharedPreferences.edit();
+
+				main_activity.getPreview().closeCamera();
+				setCameraIdPref(getCameraIdPref());
+				Log.d(" Mainact ", " position11 2 " + " /// " + position);
 
 				if (position == 0 )  // night
 				{
+					editor.putBoolean(PreferenceKeys.getFaceDetectionPreferenceKey(), true);
+					editor.putString(PreferenceKeys.getMode(), "night");
 					switchPhoto();
-//					main_activity.getPreview().pausePreview();
 				}
 				else if (position == 1 )  // video
 				{
+					editor.putBoolean(PreferenceKeys.getFaceDetectionPreferenceKey(), false);
+					editor.putString(PreferenceKeys.getMode(), "video");
 					switchVideo();
-//					main_activity.getPreview().pausePreview();
 				}
 				else if (position == 2  )  // photo
 				{
-					switchPhoto();
-//					main_activity.getPreview().onPause();
+					if (getCameraIdPref() == 0 ) // rear camera 0
+					{
+						editor.putBoolean(PreferenceKeys.getFaceDetectionPreferenceKey(), true);
+					}
 
+					else // front camera 1
+					{
+						editor.putBoolean(PreferenceKeys.getFaceDetectionPreferenceKey(), false);
+					}
+					editor.putString(PreferenceKeys.getMode(), "photo");
+					switchPhoto();
 				}
 				else if (position == 3 )  // beauty
 				{
+					editor.putBoolean(PreferenceKeys.getFaceDetectionPreferenceKey(), true);
+					editor.putString(PreferenceKeys.getMode(), "beauty");
 					switchPhoto();
-//					main_activity.getPreview().onPause();
-
 				}
 				else if (position == 4)  // pro
 				{
-
-
+					editor.putBoolean(PreferenceKeys.getFaceDetectionPreferenceKey(), true);
+					editor.putString(PreferenceKeys.getMode(), "pro");
 				}
+				editor.apply();
+				main_activity.getPreview().openCamera();
 
 			}
 
@@ -252,8 +269,6 @@ public class MyApplicationInterface implements ApplicationInterface {
 			public void onPageScrollStateChanged(int state)
 			{
 				Log.d(" Mainact ", " position11 3 " + state);
-//				main_activity.getPreview().openCamera();
-//				main_activity.getPreview().onResume();
 			}
 		});
 

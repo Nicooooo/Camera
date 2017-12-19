@@ -6,12 +6,10 @@ import net.sourceforge.opencamera.Preview.Preview;
 import net.sourceforge.opencamera.UI.FaceBeauty;
 import net.sourceforge.opencamera.UI.FirstFragment;
 import net.sourceforge.opencamera.UI.FolderChooserDialog;
-import net.sourceforge.opencamera.UI.FourthFragment;
 import net.sourceforge.opencamera.UI.MainUI;
 import net.sourceforge.opencamera.UI.PROMode;
 import net.sourceforge.opencamera.UI.SecondFragment;
 import net.sourceforge.opencamera.UI.ThirdFragment;
-import net.sourceforge.opencamera.RecordButton;
 
 import java.io.File;
 import java.io.IOException;
@@ -159,6 +157,7 @@ public class MainActivity extends AppCompatActivity implements AudioListener.Aud
 	RecordButton recordButton;
 	View takePhotoButton;
 	View takeVideoButton;
+
 
     @Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -423,7 +422,6 @@ public class MainActivity extends AppCompatActivity implements AudioListener.Aud
 
 		if( MyDebug.LOG )
 			Log.d(TAG, "onCreate: total time for Activity startup: " + (System.currentTimeMillis() - debug_time));
-
 	}
 
 
@@ -511,7 +509,7 @@ public class MainActivity extends AppCompatActivity implements AudioListener.Aud
 				Log.d(TAG, "launching from quick settings tile for Open Camera: selfie mode");
 			for(int i=0;i<preview.getCameraControllerManager().getNumberOfCameras();i++) {
 				if( preview.getCameraControllerManager().isFrontFacing(i) ) {
-					if (MyDebug.LOG)
+//					if (MyDebug.LOG)
 						Log.d(TAG, "found front camera: " + i);
 					applicationInterface.setCameraIdPref(i);
 					break;
@@ -1078,13 +1076,38 @@ public class MainActivity extends AppCompatActivity implements AudioListener.Aud
     }
 
     public void clickedSwitchCamera(View view) {
-		if( MyDebug.LOG )
-			Log.d(TAG, "clickedSwitchCamera");
+//		if( MyDebug.LOG )
+
+		SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+		SharedPreferences.Editor editor = sharedPreferences.edit();
+		String getMode = "";
+		Log.d(TAG, "clickedSwitchCamera");
 		this.closePopup();
 		if( this.preview.canSwitchCamera() ) {
 			int cameraId = getNextCameraId();
 		    View switchCameraButton = findViewById(R.id.switch_camera);
 		    switchCameraButton.setEnabled(false); // prevent slowdown if user repeatedly clicks
+			getMode = sharedPreferences.getString(PreferenceKeys.getMode(), "photo");
+			if (cameraId == 0) // rear camera 0
+			{
+				if (getMode.equals("photo") || getMode.equals("night") || getMode.equals("beauty") || getMode.equals("pro") )
+				{
+					editor.putBoolean(PreferenceKeys.getFaceDetectionPreferenceKey(), true);
+				}
+			}
+			else // front camera 1
+			{
+				if (getMode.equals("photo") || getMode.equals("night") || getMode.equals("pro") )
+				{
+					editor.putBoolean(PreferenceKeys.getFaceDetectionPreferenceKey(), false);
+				}
+				else if(getMode.equals("beauty"))
+				{
+					editor.putBoolean(PreferenceKeys.getFaceDetectionPreferenceKey(), true);
+				}
+
+			}
+			editor.apply();
 			this.preview.setCamera(cameraId);
 		    switchCameraButton.setEnabled(true);
 			mainUI.setSwitchCameraContentDescription();
@@ -3351,20 +3374,22 @@ public class MainActivity extends AppCompatActivity implements AudioListener.Aud
         private int NUM_ITEMS = 5;
         private FragmentManager fragmentManager;
         MainActivity main_activity;
+
+
         public MyPagerAdapter(FragmentManager fm, MainActivity main_activity) {
 			super(fm);
             this.main_activity = main_activity;
+			SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(main_activity);
+			SharedPreferences.Editor editor = sharedPreferences.edit();
+			editor.putString(PreferenceKeys.getMode(), "photo");
+			editor.apply();
 		}
 
         // Returns total number of pages
 		@Override
 		public int getCount() {
-
 			return NUM_ITEMS;
 		}
-
-
-
 		// Returns the fragment to display for that page
 		@Override
 		public Fragment getItem(int position) {
@@ -3386,34 +3411,32 @@ public class MainActivity extends AppCompatActivity implements AudioListener.Aud
 					return null;
 			}
 		}
-
-
-
 		// Returns the page title for the top indicator
 		@Override
 		public CharSequence getPageTitle(int position) {
 			Log.d("MainAct "," getPageTitle " + position );
 
-			if (position == 0)
-			{
-				return "NIGHT";
-			}
-			else if (position == 1)
-			{
-				return "VIDEO";
-			}
-            if (position == 2)
-            {
-                return "PHOTO";
-            }
-            else if (position == 3)
-            {
-                return "BEAUTY";
-            }
-            if (position == 4)
-            {
-                return "PRO";
-            }
+				if (position == 0)
+				{
+					return "NIGHT";
+				}
+				else if (position == 1)
+				{
+					return "VIDEO";
+				}
+				if (position == 2)
+				{
+					return "PHOTO";
+				}
+				else if (position == 3)
+				{
+					return "BEAUTY";
+				}
+				if (position == 4)
+				{
+					return "PRO";
+				}
+
 			return "";
 		}
 	}

@@ -568,6 +568,9 @@ public class MainUI {
 		if( MyDebug.LOG ) {
 			Log.d(TAG, "layoutUI: total time: " + (System.currentTimeMillis() - debug_time));
 		}
+
+		int cameraId = main_activity.getApplicationInterface().getCameraIdPref();
+		Log.d(TAG, "cameradid11 " + cameraId);
     }
 
     public void disableTakePhoto()
@@ -639,8 +642,8 @@ public class MainUI {
     /** Set content description for switch camera button.
      */
     public void setSwitchCameraContentDescription() {
-		if( MyDebug.LOG )
-			Log.d(TAG, "setSwitchCameraContentDescription()");
+//		if( MyDebug.LOG )
+			Log.d(TAG, "setSwitchCameraContentDescription()" + " canSwitchCamera 1");
 		if( main_activity.getPreview() != null && main_activity.getPreview().canSwitchCamera() ) {
 			ImageButton view = (ImageButton)main_activity.findViewById(R.id.switch_camera);
 			int content_description;
@@ -928,7 +931,7 @@ public class MainUI {
 
 		isHdrState = sharedPreferences.getBoolean(PreferenceKeys.getHdrState(), isHdrState);
 //		hdrtest = sharedPreferences.getString(PreferenceKeys.getPhotoModePreferenceKey(), "");
-		int cameraId = main_activity.getApplicationInterface().getCameraIdPref();
+//		int cameraId = main_activity.getApplicationInterface().getCameraIdPref();
 
 		CameraController.ErrorCallback previewErrorCallback = new CameraController.ErrorCallback() {
 			public void onError() {
