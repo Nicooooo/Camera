@@ -55,6 +55,7 @@
             android:layout_height="30dp"
             android:layout_gravity="center_horizontal"
             android:max="6"
+            android:progress="1"
             android:progressTint="@color/orange"
             android:thumb="@drawable/thumb" />
 
