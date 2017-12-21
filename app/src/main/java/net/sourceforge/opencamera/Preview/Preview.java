@@ -216,7 +216,7 @@ public class Preview implements SurfaceHolder.Callback, TextureView.SurfaceTextu
 	private int ui_rotation;
 
 	private boolean supports_face_detection;
-	private boolean using_face_detection;
+	public boolean using_face_detection;
 	public CameraController.Face [] faces_detected;
 	private boolean supports_video_stabilization;
 	private boolean can_disable_shutter_sound;

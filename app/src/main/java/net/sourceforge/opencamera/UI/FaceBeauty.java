@@ -62,7 +62,7 @@ public class FaceBeauty extends Fragment implements View.OnClickListener, SeekBa
 
     private static final int[] FACE_BEAUTY_ICONS_NORMAL = new int[NUMBER_FACE_BEAUTY_ICON];
     private static final int[] FACE_BEAUTY_ICONS_HIGHTLIGHT = new int[NUMBER_FACE_BEAUTY_ICON];
-//    private RotateImageView[] mFaceBeautyImageViews = new RotateImageView[NUMBER_FACE_BEAUTY_ICON];
+    //    private RotateImageView[] mFaceBeautyImageViews = new RotateImageView[NUMBER_FACE_BEAUTY_ICON];
     static {
         FACE_BEAUTY_ICONS_NORMAL[FACE_BEAUTY_WRINKLE_REMOVE] = R.drawable.fb_smooth_normal;
         FACE_BEAUTY_ICONS_NORMAL[FACE_BEAUTY_WHITENING] = R.drawable.fb_whitening_normal;
@@ -125,13 +125,13 @@ public class FaceBeauty extends Fragment implements View.OnClickListener, SeekBa
         super.onCreate(savedInstanceState);
         this.mainActivity = (MainActivity) getActivity();
         preview = mainActivity.getPreview();
+//        preview.faces_detected = null;
+//        int cameraId = preview.applicationInterface.getCameraIdPref();
 
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(mainActivity);
         SharedPreferences.Editor editor = null;
         editor = sharedPreferences.edit();
         editor.putString(PreferenceKeys.getBeauty(), "whiten");
-        editor.apply();
-
         current_beauty = "whiten";
     }
 
@@ -181,7 +181,6 @@ public class FaceBeauty extends Fragment implements View.OnClickListener, SeekBa
 //        seekBar_slim.setOnSeekBarChangeListener(this);
 //        seekBar_enlarge.setOnSeekBarChangeListener(this);
         seekBar_faceBeauty.setOnSeekBarChangeListener(this);
-
         return v;
     }
 
@@ -240,6 +239,7 @@ public class FaceBeauty extends Fragment implements View.OnClickListener, SeekBa
                 current_beauty = "smooth";
                 smoothLabel = sharedPreferences.getInt("smooth_key", current_progress);
                 seekBar_faceBeauty.setProgress(smoothLabel);
+
                 break;
 
             case R.id.slim:
@@ -281,7 +281,9 @@ public class FaceBeauty extends Fragment implements View.OnClickListener, SeekBa
 
             default:
                 break;
+
         }
+
     }
 
     @Override
