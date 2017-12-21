@@ -955,6 +955,11 @@ public class MainActivity extends AppCompatActivity implements AudioListener.Aud
 		mainUI.setting_gear();
 	}
 
+	public void clickPanorama(View view){
+		Log.d(TAG,"clickPanorama");
+		mainUI.panorama();
+	}
+
 	public void clickStoragePath(View view){
 		Log.d(TAG,"clickStoragePath");
 		mainUI.storage_path();
@@ -1092,12 +1097,12 @@ public class MainActivity extends AppCompatActivity implements AudioListener.Aud
 			{
 				if (getMode.equals("photo") || getMode.equals("night") || getMode.equals("beauty") || getMode.equals("pro") )
 				{
-					editor.putBoolean(PreferenceKeys.getFaceDetectionPreferenceKey(), true);
+					editor.putBoolean(PreferenceKeys.getFaceDetectionPreferenceKey(), false);
 				}
 			}
 			else // front camera 1
 			{
-				if (getMode.equals("photo") || getMode.equals("night") || getMode.equals("pro") )
+				if (getMode.equals("photo") || getMode.equals("pro") )
 				{
 					editor.putBoolean(PreferenceKeys.getFaceDetectionPreferenceKey(), false);
 				}
@@ -3375,7 +3380,6 @@ public class MainActivity extends AppCompatActivity implements AudioListener.Aud
         private FragmentManager fragmentManager;
         MainActivity main_activity;
 
-
         public MyPagerAdapter(FragmentManager fm, MainActivity main_activity) {
 			super(fm);
             this.main_activity = main_activity;
@@ -3384,7 +3388,6 @@ public class MainActivity extends AppCompatActivity implements AudioListener.Aud
 			editor.putString(PreferenceKeys.getMode(), "photo");
 			editor.apply();
 		}
-
         // Returns total number of pages
 		@Override
 		public int getCount() {
@@ -3393,7 +3396,6 @@ public class MainActivity extends AppCompatActivity implements AudioListener.Aud
 		// Returns the fragment to display for that page
 		@Override
 		public Fragment getItem(int position) {
-			Log.d(" MainAct "," page " + position);
 			switch (position) {
 				case 0:
 					return FirstFragment.newInstance( "");
@@ -3414,8 +3416,6 @@ public class MainActivity extends AppCompatActivity implements AudioListener.Aud
 		// Returns the page title for the top indicator
 		@Override
 		public CharSequence getPageTitle(int position) {
-			Log.d("MainAct "," getPageTitle " + position );
-
 				if (position == 0)
 				{
 					return "NIGHT";
@@ -3436,7 +3436,6 @@ public class MainActivity extends AppCompatActivity implements AudioListener.Aud
 				{
 					return "PRO";
 				}
-
 			return "";
 		}
 	}

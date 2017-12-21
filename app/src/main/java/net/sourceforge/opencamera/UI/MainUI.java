@@ -22,6 +22,7 @@ import android.media.AudioManager;
 import android.os.Build;
 import android.preference.PreferenceManager;
 import android.support.design.widget.BottomSheetDialog;
+import android.support.v4.view.ViewPager;
 import android.support.v7.widget.SwitchCompat;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -36,11 +37,14 @@ import android.view.animation.ScaleAnimation;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.ZoomControls;
+
+import com.astuetz.PagerSlidingTabStrip;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -85,6 +89,7 @@ public class MainUI {
     private String timer_picture = "";
 	private String theme_color = "";
 	RecordButton recordButton;
+
 
 	public MainUI(MainActivity main_activity) {
 		if( MyDebug.LOG )
@@ -1396,6 +1401,7 @@ public class MainUI {
 		RelativeLayout settings_relative = (RelativeLayout)main_activity.findViewById(R.id.settings_relative);
 		ImageButton settings_dots = (ImageButton)main_activity.findViewById(R.id.settings_dots);
 		SwitchCompat shutter_switch_compat = (SwitchCompat)main_activity.findViewById(R.id.shutter_switch_compat);
+		SwitchCompat face_recognition = (SwitchCompat)main_activity.findViewById(R.id.facial_switch_compat);
 
 		settings_relative.setVisibility(View.INVISIBLE);
 		settings_dots.setVisibility(View.VISIBLE);
@@ -1408,7 +1414,6 @@ public class MainUI {
 			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 				if (isChecked)
 				{
-
 					SharedPreferences.Editor editor = sharedPreferences.edit();
 					editor = sharedPreferences.edit();
 					editor.putBoolean(PreferenceKeys.getShutterSoundPreferenceKey(), true);
@@ -1431,6 +1436,69 @@ public class MainUI {
 				}
 			}
 		});
+
+		face_recognition.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+			@Override
+			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+				if (isChecked)
+				{
+
+					SharedPreferences.Editor editor = sharedPreferences.edit();
+					editor = sharedPreferences.edit();
+					editor.putBoolean(PreferenceKeys.getFaceDetectionPreferenceKey(), true);
+					editor.apply();
+
+					main_activity.getPreview().using_face_detection = main_activity.getPreview().applicationInterface.getFaceDetectionPref();
+					Log.d(TAG, " facechecked on " + main_activity.getPreview().using_face_detection);
+				}
+				else
+				{
+
+					SharedPreferences.Editor editor = sharedPreferences.edit();
+					editor = sharedPreferences.edit();
+					editor.putBoolean(PreferenceKeys.getFaceDetectionPreferenceKey(), false);
+					editor.apply();
+
+					main_activity.getPreview().using_face_detection = main_activity.getPreview().applicationInterface.getFaceDetectionPref();
+					Log.d(TAG, " facechecked off " + main_activity.getPreview().using_face_detection);
+				}
+			}
+		});
+	}
+
+	public void panorama(){
+		Log.d(TAG, " panorama ");
+
+		final RelativeLayout settings_pano = (RelativeLayout)main_activity.findViewById(R.id.settings_panorama1 );
+		RelativeLayout settings_relative = (RelativeLayout)main_activity.findViewById(R.id.settings_relative);
+		final ImageButton toggle_camera = (ImageButton) main_activity.findViewById(R.id.toggle_camera);
+		final PagerSlidingTabStrip tabs = (PagerSlidingTabStrip) main_activity.findViewById(R.id.tabs);
+		final ImageButton hdr = (ImageButton) main_activity.findViewById(R.id.hdr);
+		final ImageButton flash = (ImageButton) main_activity.findViewById(R.id.flash_auto);
+		final ImageButton timer = (ImageButton) main_activity.findViewById(R.id.timer);
+		ImageButton pano_close = (ImageButton) main_activity.findViewById(R.id.pano_close);
+		final LinearLayout pano_top = (LinearLayout) main_activity.findViewById(R.id.pano_top);
+
+
+		pano_close.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				settings_pano.setVisibility(View.INVISIBLE);
+				pano_top.setVisibility(View.INVISIBLE);
+				timer.setVisibility(View.VISIBLE);
+				hdr.setVisibility(View.VISIBLE);
+				flash.setVisibility(View.VISIBLE);
+				tabs.setVisibility(View.VISIBLE);
+				toggle_camera.setVisibility(View.VISIBLE);
+			}
+		});
+		timer.setVisibility(View.GONE);
+		hdr.setVisibility(View.GONE);
+		flash.setVisibility(View.GONE);
+		tabs.setVisibility(View.GONE);
+		toggle_camera.setVisibility(View.GONE);
+		settings_relative.setVisibility(View.GONE);
+		settings_pano.setVisibility(View.VISIBLE);
 	}
 
 	public void storage_path(){

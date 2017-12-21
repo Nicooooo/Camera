@@ -516,6 +516,12 @@
         android:layout_height="wrap_content"
         android:visibility="invisible"
         layout="@layout/settings_gear" />
+    <include
+        android:id="@+id/settings_panorama1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        layout="@layout/settings_pano" />
 
     <RelativeLayout
         android:id="@+id/settings_relative"
@@ -600,6 +606,7 @@
                     android:layout_width="wrap_content"
                     android:background="@drawable/panorama_selector"
                     android:scaleType="fitCenter"
+                    android:onClick="clickPanorama"
                     android:layout_marginTop="5dp"
                     android:layout_height="wrap_content" />
 
