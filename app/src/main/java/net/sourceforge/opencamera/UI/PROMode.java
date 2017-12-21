@@ -4,6 +4,9 @@ import android.animation.ValueAnimator;
 import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.hardware.Camera;
+import android.hardware.camera2.CaptureRequest;
+import android.hardware.camera2.params.TonemapCurve;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -25,8 +28,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.ZoomControls;
 
 import net.sourceforge.opencamera.CameraController.CameraController;
+import net.sourceforge.opencamera.CameraController.CameraController1;
 import net.sourceforge.opencamera.MainActivity;
 import net.sourceforge.opencamera.MyDebug;
 import net.sourceforge.opencamera.PreferenceKeys;
@@ -505,6 +510,7 @@ public class PROMode extends Fragment implements View.OnClickListener, SeekBar.O
         valueAnimator.start();
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
         final MainActivity main_activity = (MainActivity)getContext();
@@ -708,28 +714,66 @@ public class PROMode extends Fragment implements View.OnClickListener, SeekBar.O
                 break;
 
             case R.id.seekBar_exposure :
+
                 Log.d(TAG, " onProgressChanged1 " + progress + " fromUser " + fromUser);
 
-                int max_exposure = 12;
+//                int max_exposure = 3;
+//
+//                if (progress >= 3 || progress <= 6)
+//                {
+//                    progress -= max_exposure;
+//                    Log.d(TAG, " onProgressChanged1 " + progress + " fromUser " + fromUser);
+//
+//                } else if(progress >= 0 || progress < 3){
+//                    progress -= max_exposure;
+//                    Log.d(TAG, " onProgressChanged2 " + progress + " fromUser " + fromUser);
+//                }
 
-                if (progress >= 12 || progress <= 24)
-                {
-                    progress -= max_exposure;
-                    Log.d(TAG, " onProgressChanged1 " + progress + " fromUser " + fromUser);
 
-                } else if(progress >= 0 || progress < 12){
-                    progress -= max_exposure;
-                    Log.d(TAG, " onProgressChanged2 " + progress + " fromUser " + fromUser);
+            {
+                if( preview.supportsExposures() ) {
+                    if( MyDebug.LOG )
+                        Log.d(TAG, "set up exposure compensation");
+                    final int min_exposure = preview.getMinimumExposure();
+                    SeekBar exposure_seek_bar = seekBar_exposure;
+                    exposure_seek_bar.setOnSeekBarChangeListener(null); // clear an existing listener - don't want to call the listener when setting up the progress bar to match the existing state
+                    exposure_seek_bar.setMax( preview.getMaximumExposure() - min_exposure );
+                    exposure_seek_bar.setProgress( preview.getCurrentExposure() - min_exposure );
+                    exposure_seek_bar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+                        @Override
+                        public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                            if( MyDebug.LOG )
+                                Log.d(TAG, "exposure seekbar onProgressChanged: " + progress);
+                            preview.setExposure(min_exposure + progress);
+                        }
+
+                        @Override
+                        public void onStartTrackingTouch(SeekBar seekBar) {
+                        }
+
+                        @Override
+                        public void onStopTrackingTouch(SeekBar seekBar) {
+                        }
+                    });
+
+
                 }
+            }
+
                 exposure_label.setText(""+progress);
                 label_fadeout(exposure_label);
                 break;
+
+
+
+
 
             case R.id.seekBar_focus :
                 Log.d(TAG, " onProgressChanged1 " + progress + " fromUser " + fromUser);
                 break;
 
             case R.id.seekBar_saturation :
+
                 Log.d(TAG, " onProgressChanged1 " + progress + " fromUser " + fromUser);
 
                 int max_saturation = 2;
@@ -748,6 +792,7 @@ public class PROMode extends Fragment implements View.OnClickListener, SeekBar.O
                 break;
 
             case R.id.seekBar_contrast :
+
                 Log.d(TAG, " onProgressChanged1 " + progress + " fromUser " + fromUser);
 
                 int max_contrast = 2;
@@ -757,10 +802,11 @@ public class PROMode extends Fragment implements View.OnClickListener, SeekBar.O
                     progress -= max_contrast;
                     Log.d(TAG, " onProgressChanged1 " + progress + " fromUser " + fromUser);
 
-                } else if(progress >= 0 || progress < 2){
+                } else if(progress >= 0 || progress < 2) {
                     progress -= max_contrast;
                     Log.d(TAG, " onProgressChanged2 " + progress + " fromUser " + fromUser);
                 }
+
                 contrast_label.setText(""+progress);
                 label_fadeout(contrast_label);
                 break;
