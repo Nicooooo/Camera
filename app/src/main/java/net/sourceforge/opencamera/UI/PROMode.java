@@ -659,71 +659,58 @@ public class PROMode extends Fragment implements View.OnClickListener, SeekBar.O
                 editor.apply();
                 mainActivity.updateForSettings("ISO: " + toast_option);
 
-//                int iso;
-//                String value;
-//                switch (progress)
-//                {
-//                    case 0 :
-//
-//                        mainActivity.getApplicationInterface().setISOPref("auto");
-//
-//                        value =  mainActivity.getApplicationInterface().getISOPref();
-//                        mainActivity.getPreview().camera_controller.setISO(value);
-//                        Log.d(TAG, "value11 " + value);
-//                        break;
-//
-//                    case 1 :
-//                        mainActivity.getApplicationInterface().setISOPref("100");
-//
-//                        value =  mainActivity.getApplicationInterface().getISOPref();
-//                        mainActivity.getPreview().camera_controller.setISO(value);
-//                        Log.d(TAG, "value11 " + value);
-//                        break;
-//
-//                    case 2 :
-//                        mainActivity.getApplicationInterface().setISOPref("200");
-//
-//                        value =  mainActivity.getApplicationInterface().getISOPref();
-//                        mainActivity.getPreview().camera_controller.setISO(value);
-//                        Log.d(TAG, "value11 " + value);
-//                        break;
-//
-//                    case 3 :
-//                        mainActivity.getApplicationInterface().setISOPref("400");
-//
-//                        value =  mainActivity.getApplicationInterface().getISOPref();
-//                        mainActivity.getPreview().camera_controller.setISO(value);
-//                        Log.d(TAG, "value11 " + value);
-//                        break;
-//
-//                    case 4 :
-//                        mainActivity.getApplicationInterface().setISOPref("800");
-//
-//                        value =  mainActivity.getApplicationInterface().getISOPref();
-//                        mainActivity.getPreview().camera_controller.setISO(value);
-//                        Log.d(TAG, "value11 " + value);
-//                        break;
-//
-//                }
+
                 break;
 
             case R.id.seekBar_exposure :
                 Log.d(TAG, " onProgressChanged1 " + progress + " fromUser " + fromUser);
 
-                int max_exposure = 12;
+//                int max_exposure = 3;
+//
+//                if (progress >= 3 || progress <= 6)
+//                {
+//                    progress -= max_exposure;
+//                    Log.d(TAG, " onProgressChanged1 " + progress + " fromUser " + fromUser);
+//
+//                } else if(progress >= 0 || progress < 3){
+//                    progress -= max_exposure;
+//                    Log.d(TAG, " onProgressChanged2 " + progress + " fromUser " + fromUser);
+//                }
 
-                if (progress >= 12 || progress <= 24)
-                {
-                    progress -= max_exposure;
-                    Log.d(TAG, " onProgressChanged1 " + progress + " fromUser " + fromUser);
 
-                } else if(progress >= 0 || progress < 12){
-                    progress -= max_exposure;
-                    Log.d(TAG, " onProgressChanged2 " + progress + " fromUser " + fromUser);
+            {
+                if( preview.supportsExposures() ) {
+                    if( MyDebug.LOG )
+                        Log.d(TAG, "set up exposure compensation");
+                    final int min_exposure = preview.getMinimumExposure();
+                    SeekBar exposure_seek_bar = seekBar_exposure;
+                    exposure_seek_bar.setOnSeekBarChangeListener(null); // clear an existing listener - don't want to call the listener when setting up the progress bar to match the existing state
+                    exposure_seek_bar.setMax( preview.getMaximumExposure() - min_exposure );
+                    exposure_seek_bar.setProgress( preview.getCurrentExposure() - min_exposure );
+                    exposure_seek_bar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+                        @Override
+                        public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                            if( MyDebug.LOG )
+                                Log.d(TAG, "exposure seekbar onProgressChanged: " + progress);
+                            preview.setExposure(min_exposure + progress);
+                        }
+
+                        @Override
+                        public void onStartTrackingTouch(SeekBar seekBar) {
+                        }
+
+                        @Override
+                        public void onStopTrackingTouch(SeekBar seekBar) {
+                        }
+                    });
+
+
                 }
-                exposure_label.setText(""+progress);
-                label_fadeout(exposure_label);
-                break;
+            }
+
+            exposure_label.setText(""+progress);
+            label_fadeout(exposure_label);
+            break;
 
             case R.id.seekBar_focus :
                 Log.d(TAG, " onProgressChanged1 " + progress + " fromUser " + fromUser);
