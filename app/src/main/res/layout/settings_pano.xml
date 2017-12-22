@@ -51,6 +51,7 @@
         android:layout_alignParentBottom="true"
         android:layout_height="wrap_content">
 
+        
         <ImageButton
             android:id="@+id/gallery"
             android:layout_width="50dp"
