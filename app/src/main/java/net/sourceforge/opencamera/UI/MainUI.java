@@ -1478,7 +1478,7 @@ public class MainUI {
 		final ImageButton timer = (ImageButton) main_activity.findViewById(R.id.timer);
 		ImageButton pano_close = (ImageButton) main_activity.findViewById(R.id.pano_close);
 		final LinearLayout pano_top = (LinearLayout) main_activity.findViewById(R.id.pano_top);
-
+		final ImageButton settings_dots = (ImageButton)main_activity.findViewById(R.id.settings_dots);
 
 		pano_close.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -1490,6 +1490,7 @@ public class MainUI {
 				flash.setVisibility(View.VISIBLE);
 				tabs.setVisibility(View.VISIBLE);
 				toggle_camera.setVisibility(View.VISIBLE);
+				settings_dots.setVisibility(View.VISIBLE);
 			}
 		});
 		timer.setVisibility(View.GONE);
@@ -1499,6 +1500,7 @@ public class MainUI {
 		toggle_camera.setVisibility(View.GONE);
 		settings_relative.setVisibility(View.GONE);
 		settings_pano.setVisibility(View.VISIBLE);
+		pano_top.setVisibility(View.VISIBLE);
 	}
 
 	public void storage_path(){
